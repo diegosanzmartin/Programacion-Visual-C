@@ -46,11 +46,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="RelojMain.cs">
+    <Compile Include="RelojAnalogico.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="RelojMain.Designer.cs">
-      <DependentUpon>RelojMain.cs</DependentUpon>
+    <Compile Include="RelojAnalogico.Designer.cs">
+      <DependentUpon>RelojAnalogico.cs</DependentUpon>
+    </Compile>
+    <Compile Include="RelojDigital.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="RelojDigital.Designer.cs">
+      <DependentUpon>RelojDigital.cs</DependentUpon>
     </Compile>
     <Compile Include="AcercaDe.cs">
       <SubType>Form</SubType>
@@ -63,8 +69,11 @@
     <EmbeddedResource Include="AcercaDe.resx">
       <DependentUpon>AcercaDe.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="RelojMain.resx">
-      <DependentUpon>RelojMain.cs</DependentUpon>
+    <EmbeddedResource Include="RelojAnalogico.resx">
+      <DependentUpon>RelojAnalogico.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="RelojDigital.resx">
+      <DependentUpon>RelojDigital.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Drawing;
 using System.Windows.Forms;
 
 namespace P1
@@ -6,10 +7,13 @@ namespace P1
     public partial class RelojDigital : Form
     {
         private TimeSpan m_DesfaseHorario = new TimeSpan(0);
+        RelojAnalogico m_RelojAnalogico = new RelojAnalogico();
+
         public RelojDigital()
         {
             InitializeComponent();
             MostrarHoraActual();
+            m_RelojAnalogico.Show(this);
         }
 
         private void MostrarHoraActual()
@@ -38,6 +42,10 @@ namespace P1
         {
             DateTime hora = DateTime.Now + m_DesfaseHorario;
             MostrarHoraActual();
+        }
+        private void RelojDigital_Shown(object sender, EventArgs e)
+        {
+            m_RelojAnalogico.Location = new Point(this.Location.X + 100 + 10, 1000);
         }
     }
 }
