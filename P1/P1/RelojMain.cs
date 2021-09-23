@@ -1,20 +1,21 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
 
 namespace P1
 {
     public partial class RelojDigital : Form
     {
+        private TimeSpan m_DesfaseHorario = new TimeSpan(0);
         public RelojDigital()
         {
             InitializeComponent();
+            MostrarHoraActual();
+        }
+
+        private void MostrarHoraActual()
+        {
+            DateTime hora = DateTime.Now;
+            ct_HoraActual.Text = hora.ToLongTimeString();
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -31,6 +32,12 @@ namespace P1
         {
             AcercaDe dlg = new AcercaDe();
             dlg.ShowDialog();
+        }
+
+        private void bt_Actualizar_Click(object sender, EventArgs e)
+        {
+            DateTime hora = DateTime.Now + m_DesfaseHorario;
+            MostrarHoraActual();
         }
     }
 }

@@ -71,11 +71,20 @@ namespace P1.Properties {
         }
         
         /// <summary>
-        ///   Busca una cadena traducida similar a Práctica 1 Diego Sanz Martín.
+        ///   Busca una cadena traducida similar a Práctica 1.
         /// </summary>
-        internal static string textoAcercaDe {
+        internal static string textoAcercaDe1 {
             get {
-                return ResourceManager.GetString("textoAcercaDe", resourceCulture);
+                return ResourceManager.GetString("textoAcercaDe1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Diego Sanz Martín.
+        /// </summary>
+        internal static string textoAcercaDe2 {
+            get {
+                return ResourceManager.GetString("textoAcercaDe2", resourceCulture);
             }
         }
     }

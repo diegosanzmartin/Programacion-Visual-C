@@ -15,6 +15,8 @@ namespace P1
         public AcercaDe()
         {
             InitializeComponent();
+            this.labelAcercaDe.Text = Properties.Resources.textoAcercaDe1;
+            this.labelAcercaDe2.Text = Properties.Resources.textoAcercaDe2;
         }
     }
 }
