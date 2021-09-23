@@ -20,6 +20,7 @@ namespace P1
         {
             DateTime hora = DateTime.Now;
             ct_HoraActual.Text = hora.ToLongTimeString();
+            m_RelojAnalogico.Hora = hora;
         }
 
         private void Form1_Load(object sender, EventArgs e)

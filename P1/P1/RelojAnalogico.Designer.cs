@@ -40,6 +40,8 @@ namespace P1
             this.Name = "RelojAnalogico";
             this.Text = "Reloj Analógico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RelojAnalogico_FormClosing);
+            this.Paint += new System.Windows.Forms.PaintEventHandler(this.RelojAnalogico_Paint);
+            this.Resize += new System.EventHandler(this.RelojAnalogico_Resize);
             this.ResumeLayout(false);
 
         }
