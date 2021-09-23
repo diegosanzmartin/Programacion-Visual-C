@@ -48,5 +48,10 @@ namespace P1
         {
             m_RelojAnalogico.Location = new Point(this.Location.X + 100 + 10, 1000);
         }
+
+        private void timer_Tick(object sender, EventArgs e)
+        {
+            MostrarHoraActual();
+        }
     }
 }

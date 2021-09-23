@@ -47,6 +47,7 @@ namespace P1
         private void RelojAnalogico_Resize(object sender, EventArgs e)
         {
             ActualizarDimensiones();
+            Invalidate();
         }
 
         private void RelojAnalogico_Paint(object sender, PaintEventArgs e)

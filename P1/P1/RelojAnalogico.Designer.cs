@@ -37,6 +37,7 @@ namespace P1
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.ControlBox = false;
+            this.DoubleBuffered = true;
             this.Name = "RelojAnalogico";
             this.Text = "Reloj Analógico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RelojAnalogico_FormClosing);
