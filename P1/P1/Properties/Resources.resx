@@ -127,4 +127,10 @@
   <data name="textoAcercaDe2" xml:space="preserve">
     <value>Diego Sanz Martín</value>
   </data>
+  <data name="AnalogicoOFF" xml:space="preserve">
+    <value>Mostrar analogico</value>
+  </data>
+  <data name="AnalogicoON" xml:space="preserve">
+    <value>Ocultar analogico</value>
+  </data>
 </root>

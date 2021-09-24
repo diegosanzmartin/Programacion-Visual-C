@@ -14,6 +14,7 @@ namespace P1
             InitializeComponent();
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
+            bt_Mostrar.Text = Properties.Resources.AnalogicoON;
         }
 
         private void MostrarHoraActual()
@@ -52,6 +53,20 @@ namespace P1
         private void timer_Tick(object sender, EventArgs e)
         {
             MostrarHoraActual();
+        }
+
+        private void bt_Mostrar_Click(object sender, EventArgs e)
+        {
+            if(m_RelojAnalogico.Focus())
+            {
+                m_RelojAnalogico.Hide();
+                bt_Mostrar.Text = Properties.Resources.AnalogicoOFF;
+            }
+            else
+            {
+                m_RelojAnalogico.Show(this);
+                bt_Mostrar.Text = Properties.Resources.AnalogicoON;
+            }
         }
     }
 }

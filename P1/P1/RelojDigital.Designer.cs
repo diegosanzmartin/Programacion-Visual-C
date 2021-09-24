@@ -38,8 +38,8 @@ namespace P1
             this.acercaDeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.label1 = new System.Windows.Forms.Label();
             this.ct_HoraActual = new System.Windows.Forms.TextBox();
-            this.bt_Actualizar = new System.Windows.Forms.Button();
             this.timer = new System.Windows.Forms.Timer(this.components);
+            this.bt_Mostrar = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -101,37 +101,39 @@ namespace P1
             // 
             this.ct_HoraActual.AcceptsReturn = true;
             this.ct_HoraActual.Cursor = System.Windows.Forms.Cursors.Default;
+            this.ct_HoraActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ct_HoraActual.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ct_HoraActual.Location = new System.Drawing.Point(284, 225);
+            this.ct_HoraActual.Location = new System.Drawing.Point(284, 171);
             this.ct_HoraActual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ct_HoraActual.Name = "ct_HoraActual";
             this.ct_HoraActual.ReadOnly = true;
-            this.ct_HoraActual.Size = new System.Drawing.Size(148, 26);
+            this.ct_HoraActual.Size = new System.Drawing.Size(148, 32);
             this.ct_HoraActual.TabIndex = 2;
             this.ct_HoraActual.TabStop = false;
             this.ct_HoraActual.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // bt_Actualizar
-            // 
-            this.bt_Actualizar.Location = new System.Drawing.Point(311, 292);
-            this.bt_Actualizar.Name = "bt_Actualizar";
-            this.bt_Actualizar.Size = new System.Drawing.Size(95, 31);
-            this.bt_Actualizar.TabIndex = 3;
-            this.bt_Actualizar.Text = "Actualizar";
-            this.bt_Actualizar.UseVisualStyleBackColor = true;
-            this.bt_Actualizar.Click += new System.EventHandler(this.bt_Actualizar_Click);
             // 
             // timer
             // 
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // bt_Mostrar
+            // 
+            this.bt_Mostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_Mostrar.Location = new System.Drawing.Point(258, 287);
+            this.bt_Mostrar.Name = "bt_Mostrar";
+            this.bt_Mostrar.Size = new System.Drawing.Size(200, 39);
+            this.bt_Mostrar.TabIndex = 3;
+            this.bt_Mostrar.Text = "Text";
+            this.bt_Mostrar.UseVisualStyleBackColor = true;
+            this.bt_Mostrar.Click += new System.EventHandler(this.bt_Mostrar_Click);
+            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 443);
-            this.Controls.Add(this.bt_Actualizar);
+            this.Controls.Add(this.bt_Mostrar);
             this.Controls.Add(this.ct_HoraActual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -159,8 +161,8 @@ namespace P1
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ct_HoraActual;
-        private System.Windows.Forms.Button bt_Actualizar;
         private System.Windows.Forms.Timer timer;
+        private System.Windows.Forms.Button bt_Mostrar;
     }
 }
 

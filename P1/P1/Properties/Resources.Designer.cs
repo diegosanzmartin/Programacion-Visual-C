@@ -61,6 +61,24 @@ namespace P1.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Mostrar analogico.
+        /// </summary>
+        internal static string AnalogicoOFF {
+            get {
+                return ResourceManager.GetString("AnalogicoOFF", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Busca una cadena traducida similar a Ocultar analogico.
+        /// </summary>
+        internal static string AnalogicoON {
+            get {
+                return ResourceManager.GetString("AnalogicoON", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap logo {

@@ -41,7 +41,14 @@ namespace P1
         private void RelojAnalogico_FormClosing(object sender, FormClosingEventArgs e)
         {
             if (this.Focus())
-                e.Cancel = true;
+            {
+                switch (e.CloseReason)
+                {
+                    case CloseReason.UserClosing:
+                        e.Cancel = true;
+                        break;
+                }
+            }
         }
 
         private void RelojAnalogico_Resize(object sender, EventArgs e)
