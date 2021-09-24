@@ -39,9 +39,12 @@ namespace P1
             this.ControlBox = false;
             this.DoubleBuffered = true;
             this.Name = "RelojAnalogico";
+            this.ShowInTaskbar = false;
             this.Text = "Reloj Analógico";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RelojAnalogico_FormClosing);
             this.Paint += new System.Windows.Forms.PaintEventHandler(this.RelojAnalogico_Paint);
+            this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RelojAnalogico_MouseDown);
+            this.MouseMove += new System.Windows.Forms.MouseEventHandler(this.RelojAnalogico_MouseMove);
             this.Resize += new System.EventHandler(this.RelojAnalogico_Resize);
             this.ResumeLayout(false);
 

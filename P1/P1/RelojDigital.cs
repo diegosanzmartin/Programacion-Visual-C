@@ -19,7 +19,7 @@ namespace P1
 
         private void MostrarHoraActual()
         {
-            DateTime hora = DateTime.Now;
+            DateTime hora = DateTime.Now + m_DesfaseHorario;
             ct_HoraActual.Text = hora.ToLongTimeString();
             m_RelojAnalogico.Hora = hora;
         }
@@ -67,6 +67,15 @@ namespace P1
                 m_RelojAnalogico.Show(this);
                 bt_Mostrar.Text = Properties.Resources.AnalogicoON;
             }
+        }
+
+        internal void CambiarHora(int horas, int minutos, int segundos)
+        {
+            DateTime actual = DateTime.Now;
+            DateTime hora = new DateTime(actual.Year, actual.Month, actual.Day, horas, minutos, segundos);
+            m_DesfaseHorario = hora - actual;
+            Console.WriteLine(hora);
+            MostrarHoraActual();
         }
     }
 }

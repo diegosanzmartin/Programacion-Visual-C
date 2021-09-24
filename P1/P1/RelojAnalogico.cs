@@ -123,5 +123,38 @@ namespace P1
             gfx.FillEllipse(brochaGris, -radioBotón, -radioBotón,
              radioBotón * 2, radioBotón * 2);
         }
+
+        private void RelojAnalogico_MouseDown(object sender, MouseEventArgs e)
+        {
+            ArrastrarAgujas(sender, e);
+        }
+
+        private void RelojAnalogico_MouseMove(object sender, MouseEventArgs e)
+        {
+            ArrastrarAgujas(sender, e);
+        }
+
+        private void ArrastrarAgujas(object sender, MouseEventArgs e)
+        {
+            bool botonDerIzq = e.Button == MouseButtons.Right || e.Button == MouseButtons.Left;
+            bool pulsadoCentro = (e.X == m_Centro.X && e.Y == m_Centro.Y);
+
+            if (m_Radio < 10 || !botonDerIzq || pulsadoCentro)
+            {
+                return;
+            }
+
+            double alfa;
+            int horas, minutos;
+            alfa = Math.Atan2(m_Centro.X - e.X, e.Y - m_Centro.Y);
+            minutos = (int)((alfa / Math.PI / 2 * 12 + 6) * 60);
+            horas = (minutos / 60) % 12;
+            minutos %= 60;
+            if (e.Button == MouseButtons.Right)
+                horas += 12;
+
+            RelojDigital relojD = (RelojDigital)this.Owner;
+            relojD.CambiarHora(horas, minutos, m_Hora.Second);
+        }
     }
 }
