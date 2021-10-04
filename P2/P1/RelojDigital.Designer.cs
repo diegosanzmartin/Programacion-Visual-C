@@ -40,6 +40,8 @@ namespace P1
             this.ct_HoraActual = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.bt_Mostrar = new System.Windows.Forms.Button();
+            this.bt_ColorFondo = new System.Windows.Forms.Button();
+            this.bt_Fuente = new System.Windows.Forms.Button();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -128,11 +130,35 @@ namespace P1
             this.bt_Mostrar.UseVisualStyleBackColor = true;
             this.bt_Mostrar.Click += new System.EventHandler(this.bt_Mostrar_Click);
             // 
+            // bt_ColorFondo
+            // 
+            this.bt_ColorFondo.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.bt_ColorFondo.Location = new System.Drawing.Point(384, 355);
+            this.bt_ColorFondo.Name = "bt_ColorFondo";
+            this.bt_ColorFondo.Size = new System.Drawing.Size(109, 31);
+            this.bt_ColorFondo.TabIndex = 4;
+            this.bt_ColorFondo.Text = "Color fondo";
+            this.bt_ColorFondo.UseVisualStyleBackColor = true;
+            this.bt_ColorFondo.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // bt_Fuente
+            // 
+            this.bt_Fuente.DialogResult = System.Windows.Forms.DialogResult.OK;
+            this.bt_Fuente.Location = new System.Drawing.Point(232, 355);
+            this.bt_Fuente.Name = "bt_Fuente";
+            this.bt_Fuente.Size = new System.Drawing.Size(85, 31);
+            this.bt_Fuente.TabIndex = 5;
+            this.bt_Fuente.Text = "Fuente";
+            this.bt_Fuente.UseVisualStyleBackColor = true;
+            this.bt_Fuente.Click += new System.EventHandler(this.button2_Click);
+            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(716, 443);
+            this.Controls.Add(this.bt_Fuente);
+            this.Controls.Add(this.bt_ColorFondo);
             this.Controls.Add(this.bt_Mostrar);
             this.Controls.Add(this.ct_HoraActual);
             this.Controls.Add(this.label1);
@@ -163,6 +189,8 @@ namespace P1
         private System.Windows.Forms.TextBox ct_HoraActual;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.Button bt_Mostrar;
+        private System.Windows.Forms.Button bt_ColorFondo;
+        private System.Windows.Forms.Button bt_Fuente;
     }
 }
 

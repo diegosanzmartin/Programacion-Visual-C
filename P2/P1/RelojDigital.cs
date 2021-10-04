@@ -13,6 +13,8 @@ namespace P1
         {
             InitializeComponent();
             ct_HoraActual.Font = new Font("Arial", 16, FontStyle.Bold, GraphicsUnit.Pixel);
+            ct_HoraActual.BackColor = Color.White;
+            ct_HoraActual.ForeColor = Color.Blue;
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
             bt_Mostrar.Text = Properties.Resources.AnalogicoON;
@@ -77,6 +79,28 @@ namespace P1
             m_DesfaseHorario = hora - actual;
             Console.WriteLine(hora);
             MostrarHoraActual();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            FontDialog dlgFont = new FontDialog();
+            //... Inicialización del diálogo
+            if (dlgFont.ShowDialog() == DialogResult.OK)
+            {
+                // ... Extracción de los datos introducidos por el usuario
+                ct_HoraActual.Font = dlgFont.Font;
+            }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlgColor = new ColorDialog();
+            //... Inicialización del diálogo
+            if (dlgColor.ShowDialog() == DialogResult.OK)
+            {
+                // ... Extracción de los datos introducidos por el usuario
+                ct_HoraActual.BackColor = dlgColor.Color;
+            }
         }
     }
 }
