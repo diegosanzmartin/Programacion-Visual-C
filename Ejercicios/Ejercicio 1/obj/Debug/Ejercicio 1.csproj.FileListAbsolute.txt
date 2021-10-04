@@ -1,0 +1,11 @@
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\bin\Debug\Ejercicio 1.exe.config
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\bin\Debug\Ejercicio 1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\bin\Debug\Ejercicio 1.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio 1.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio_1.Ej1_Principal.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio_1.Contraseña.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio_1.Properties.Resources.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio 1.csproj.GenerateResource.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio 1.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio 1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\Ejercicios\Ejercicio 1\obj\Debug\Ejercicio 1.pdb
