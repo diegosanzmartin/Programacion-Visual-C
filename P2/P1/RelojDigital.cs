@@ -17,7 +17,7 @@ namespace P1
             ct_HoraActual.ForeColor = Color.Blue;
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
-            bt_Mostrar.Text = Properties.Resources.AnalogicoON;
+            mostrarAnalogicoMenu.CheckState = CheckState.Checked;
         }
 
         private void MostrarHoraActual()
@@ -58,20 +58,6 @@ namespace P1
             MostrarHoraActual();
         }
 
-        private void bt_Mostrar_Click(object sender, EventArgs e)
-        {
-            if(m_RelojAnalogico.Focus())
-            {
-                m_RelojAnalogico.Hide();
-                bt_Mostrar.Text = Properties.Resources.AnalogicoOFF;
-            }
-            else
-            {
-                m_RelojAnalogico.Show(this);
-                bt_Mostrar.Text = Properties.Resources.AnalogicoON;
-            }
-        }
-
         internal void CambiarHora(int horas, int minutos, int segundos)
         {
             DateTime actual = DateTime.Now;
@@ -81,18 +67,23 @@ namespace P1
             MostrarHoraActual();
         }
 
-        private void button2_Click(object sender, EventArgs e)
+        private void mostrarAnalogicoMenu_Click(object sender, EventArgs e)
         {
-            FontDialog dlgFont = new FontDialog();
-            //... Inicialización del diálogo
-            if (dlgFont.ShowDialog() == DialogResult.OK)
-            {
-                // ... Extracción de los datos introducidos por el usuario
-                ct_HoraActual.Font = dlgFont.Font;
-            }
+            if (m_RelojAnalogico.Focus())
+                m_RelojAnalogico.Hide();
+            else
+                m_RelojAnalogico.Show(this);
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void OpcionesMenu_DropDownOpened(object sender, EventArgs e)
+        {
+            if (!m_RelojAnalogico.Focus())
+                mostrarAnalogicoMenu.CheckState = CheckState.Unchecked;
+            else
+                mostrarAnalogicoMenu.CheckState = CheckState.Checked;
+        }
+
+        private void colorFondoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ColorDialog dlgColor = new ColorDialog();
             //... Inicialización del diálogo
@@ -100,6 +91,17 @@ namespace P1
             {
                 // ... Extracción de los datos introducidos por el usuario
                 ct_HoraActual.BackColor = dlgColor.Color;
+            }
+        }
+
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog dlgFont = new FontDialog();
+            //... Inicialización del diálogo
+            if (dlgFont.ShowDialog() == DialogResult.OK)
+            {
+                // ... Extracción de los datos introducidos por el usuario
+                ct_HoraActual.Font = dlgFont.Font;
             }
         }
     }

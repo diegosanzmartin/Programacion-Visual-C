@@ -39,9 +39,10 @@ namespace P1
             this.label1 = new System.Windows.Forms.Label();
             this.ct_HoraActual = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.bt_Mostrar = new System.Windows.Forms.Button();
-            this.bt_ColorFondo = new System.Windows.Forms.Button();
-            this.bt_Fuente = new System.Windows.Forms.Button();
+            this.OpcionesMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.mostrarAnalogicoMenu = new System.Windows.Forms.ToolStripMenuItem();
+            this.colorFondoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fuenteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -51,10 +52,11 @@ namespace P1
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
+            this.OpcionesMenu,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(716, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 33);
             this.menuStrip1.TabIndex = 0;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -92,7 +94,7 @@ namespace P1
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(223, 105);
+            this.label1.Location = new System.Drawing.Point(127, 84);
             this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(270, 52);
@@ -105,7 +107,7 @@ namespace P1
             this.ct_HoraActual.Cursor = System.Windows.Forms.Cursors.Default;
             this.ct_HoraActual.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.ct_HoraActual.ForeColor = System.Drawing.SystemColors.MenuHighlight;
-            this.ct_HoraActual.Location = new System.Drawing.Point(284, 171);
+            this.ct_HoraActual.Location = new System.Drawing.Point(188, 171);
             this.ct_HoraActual.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.ct_HoraActual.Name = "ct_HoraActual";
             this.ct_HoraActual.ReadOnly = true;
@@ -119,47 +121,45 @@ namespace P1
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
-            // bt_Mostrar
+            // OpcionesMenu
             // 
-            this.bt_Mostrar.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bt_Mostrar.Location = new System.Drawing.Point(258, 287);
-            this.bt_Mostrar.Name = "bt_Mostrar";
-            this.bt_Mostrar.Size = new System.Drawing.Size(200, 39);
-            this.bt_Mostrar.TabIndex = 3;
-            this.bt_Mostrar.Text = "Text";
-            this.bt_Mostrar.UseVisualStyleBackColor = true;
-            this.bt_Mostrar.Click += new System.EventHandler(this.bt_Mostrar_Click);
+            this.OpcionesMenu.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.mostrarAnalogicoMenu,
+            this.colorFondoToolStripMenuItem,
+            this.fuenteToolStripMenuItem});
+            this.OpcionesMenu.Name = "OpcionesMenu";
+            this.OpcionesMenu.Size = new System.Drawing.Size(103, 29);
+            this.OpcionesMenu.Text = "Opciones";
+            this.OpcionesMenu.DropDownOpened += new System.EventHandler(this.OpcionesMenu_DropDownOpened);
             // 
-            // bt_ColorFondo
+            // mostrarAnalogicoMenu
             // 
-            this.bt_ColorFondo.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.bt_ColorFondo.Location = new System.Drawing.Point(384, 355);
-            this.bt_ColorFondo.Name = "bt_ColorFondo";
-            this.bt_ColorFondo.Size = new System.Drawing.Size(109, 31);
-            this.bt_ColorFondo.TabIndex = 4;
-            this.bt_ColorFondo.Text = "Color fondo";
-            this.bt_ColorFondo.UseVisualStyleBackColor = true;
-            this.bt_ColorFondo.Click += new System.EventHandler(this.button1_Click);
+            this.mostrarAnalogicoMenu.Checked = true;
+            this.mostrarAnalogicoMenu.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.mostrarAnalogicoMenu.Name = "mostrarAnalogicoMenu";
+            this.mostrarAnalogicoMenu.Size = new System.Drawing.Size(270, 34);
+            this.mostrarAnalogicoMenu.Text = "Mostrar Analógico";
+            this.mostrarAnalogicoMenu.Click += new System.EventHandler(this.mostrarAnalogicoMenu_Click);
             // 
-            // bt_Fuente
+            // colorFondoToolStripMenuItem
             // 
-            this.bt_Fuente.DialogResult = System.Windows.Forms.DialogResult.OK;
-            this.bt_Fuente.Location = new System.Drawing.Point(232, 355);
-            this.bt_Fuente.Name = "bt_Fuente";
-            this.bt_Fuente.Size = new System.Drawing.Size(85, 31);
-            this.bt_Fuente.TabIndex = 5;
-            this.bt_Fuente.Text = "Fuente";
-            this.bt_Fuente.UseVisualStyleBackColor = true;
-            this.bt_Fuente.Click += new System.EventHandler(this.button2_Click);
+            this.colorFondoToolStripMenuItem.Name = "colorFondoToolStripMenuItem";
+            this.colorFondoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.colorFondoToolStripMenuItem.Text = "Color fondo";
+            this.colorFondoToolStripMenuItem.Click += new System.EventHandler(this.colorFondoToolStripMenuItem_Click);
+            // 
+            // fuenteToolStripMenuItem
+            // 
+            this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.fuenteToolStripMenuItem.Text = "Fuente";
+            this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(716, 443);
-            this.Controls.Add(this.bt_Fuente);
-            this.Controls.Add(this.bt_ColorFondo);
-            this.Controls.Add(this.bt_Mostrar);
+            this.ClientSize = new System.Drawing.Size(524, 278);
             this.Controls.Add(this.ct_HoraActual);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.menuStrip1);
@@ -188,9 +188,10 @@ namespace P1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ct_HoraActual;
         private System.Windows.Forms.Timer timer;
-        private System.Windows.Forms.Button bt_Mostrar;
-        private System.Windows.Forms.Button bt_ColorFondo;
-        private System.Windows.Forms.Button bt_Fuente;
+        private System.Windows.Forms.ToolStripMenuItem OpcionesMenu;
+        private System.Windows.Forms.ToolStripMenuItem mostrarAnalogicoMenu;
+        private System.Windows.Forms.ToolStripMenuItem colorFondoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
     }
 }
 
