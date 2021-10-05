@@ -45,6 +45,7 @@ namespace P1
             this.timer = new System.Windows.Forms.Timer(this.components);
             this.label2 = new System.Windows.Forms.Label();
             this.ct_Alarma = new P1.EditHora();
+            this.label = new System.Windows.Forms.Label();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -176,11 +177,22 @@ namespace P1
             this.ct_Alarma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ct_Alarma.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
+            // label
+            // 
+            this.label.AutoSize = true;
+            this.label.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label.Location = new System.Drawing.Point(98, 37);
+            this.label.Name = "label";
+            this.label.Size = new System.Drawing.Size(152, 29);
+            this.label.TabIndex = 5;
+            this.label.Text = "Hora actual:";
+            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(349, 221);
+            this.Controls.Add(this.label);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.ct_Alarma);
             this.Controls.Add(this.ct_HoraActual);
@@ -215,6 +227,7 @@ namespace P1
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.TextBox ct_HoraActual;
         private EditHora ct_Alarma;
+        private System.Windows.Forms.Label label;
     }
 }
 
