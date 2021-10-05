@@ -43,8 +43,8 @@ namespace P1
             this.label1 = new System.Windows.Forms.Label();
             this.ct_HoraActual = new System.Windows.Forms.TextBox();
             this.timer = new System.Windows.Forms.Timer(this.components);
-            this.ct_Alarma = new P1.EditHora();
             this.label2 = new System.Windows.Forms.Label();
+            this.ct_Alarma = new P1.EditHora();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -60,7 +60,6 @@ namespace P1
             this.menuStrip1.Padding = new System.Windows.Forms.Padding(4, 1, 0, 1);
             this.menuStrip1.Size = new System.Drawing.Size(349, 24);
             this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
             // 
             // archivoToolStripMenuItem
             // 
@@ -132,9 +131,8 @@ namespace P1
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(98, 37);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(152, 29);
+            this.label1.Size = new System.Drawing.Size(0, 29);
             this.label1.TabIndex = 1;
-            this.label1.Text = "Hora actual:";
             // 
             // ct_HoraActual
             // 
@@ -155,6 +153,16 @@ namespace P1
             this.timer.Enabled = true;
             this.timer.Tick += new System.EventHandler(this.timer_Tick);
             // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(144, 124);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(61, 16);
+            this.label2.TabIndex = 4;
+            this.label2.Text = "Alarma:";
+            // 
             // ct_Alarma
             // 
             this.ct_Alarma.BeepOnError = true;
@@ -166,16 +174,7 @@ namespace P1
             this.ct_Alarma.Size = new System.Drawing.Size(100, 20);
             this.ct_Alarma.TabIndex = 3;
             this.ct_Alarma.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(144, 124);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(61, 16);
-            this.label2.TabIndex = 4;
-            this.label2.Text = "Alarma:";
+            this.ct_Alarma.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // RelojDigital
             // 
@@ -202,21 +201,20 @@ namespace P1
         }
 
         #endregion
-
-        private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem archivoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem salirToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ayudaToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem acercaDeToolStripMenuItem;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox ct_HoraActual;
         private System.Windows.Forms.Timer timer;
         private System.Windows.Forms.ToolStripMenuItem OpcionesMenu;
         private System.Windows.Forms.ToolStripMenuItem mostrarAnalogicoMenu;
         private System.Windows.Forms.ToolStripMenuItem colorFondoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem fuenteToolStripMenuItem;
-        private EditHora ct_Alarma;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.MenuStrip menuStrip1;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ct_HoraActual;
+        private EditHora ct_Alarma;
     }
 }
 

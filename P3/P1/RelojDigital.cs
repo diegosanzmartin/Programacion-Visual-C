@@ -8,6 +8,7 @@ namespace P1
     {
         private TimeSpan m_DesfaseHorario = new TimeSpan(0);
         RelojAnalogico m_RelojAnalogico = new RelojAnalogico();
+        private int segundosAlarma;
 
         public RelojDigital()
         {
@@ -56,6 +57,26 @@ namespace P1
         private void timer_Tick(object sender, EventArgs e)
         {
             MostrarHoraActual();
+
+            if (!ct_Alarma.HoraValida)
+            {
+                System.Diagnostics.Debug.WriteLine("Hora alarma nó válida");
+                return;
+            }
+            DateTime horaActual = DateTime.Now + m_DesfaseHorario;
+            DateTime horaAlarma = ct_Alarma.Hora;
+            int segundosActual = horaActual.Second
+            + horaActual.Minute * 60
+            + horaActual.Hour * 3600;
+            // Segundos alarma:
+
+            if (segundosActual >= segundosAlarma)
+            {
+                if (segundosActual - segundosAlarma < 300)
+                    Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
+            }
+            else if (segundosAlarma - segundosActual > 86400 - 300)
+                Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
         }
 
         internal void CambiarHora(int horas, int minutos, int segundos)

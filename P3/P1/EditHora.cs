@@ -13,6 +13,7 @@ namespace P1
         {
             this.Mask = "90:00:99";
             this.TextAlign = HorizontalAlignment.Center;
+            this.TextMaskFormat = MaskFormat.IncludePromptAndLiterals;
             this.BeepOnError = true;
             this.PromptChar = '-';
         }
