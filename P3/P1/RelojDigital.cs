@@ -128,5 +128,24 @@ namespace P1
                 ct_HoraActual.Font = dlgFont.Font;
             }
         }
+
+        private void bt_ZonaHoraria_Click_Click(object sender, EventArgs e)
+        {
+            DlgDatosZona dlg = new DlgDatosZona();
+
+            if (dlg.ShowDialog() == DialogResult.OK)
+            {
+                string desfase = dlg.Diferencia.ToString();
+                string signo = dlg.Positivo ? "Positivo" : "Negativo";
+
+                // Visualizar una caja de diálogo que muestre los datos
+                // de la zona recogidos en el diálogo
+                MessageBox.Show("Nombre: " + dlg.Nombre + "\nDesfase: " + desfase + "\nSigno: " + signo, "Datos de la zona",MessageBoxButtons.OK ,MessageBoxIcon.Information);
+            }
+        }
+
+
     }
 }
+
+
