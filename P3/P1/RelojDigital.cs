@@ -15,7 +15,9 @@ namespace P1
             set
             {
                 m_DespertadorActivado = value;
-                DespertadorActivar.Checked = m_DespertadorActivado;
+
+                OpcionesDespertadorActivar.Enabled = !m_DespertadorActivado;
+                OpcionesDespertadorDesactivar.Enabled = m_DespertadorActivado;
             }
 
         }
@@ -29,6 +31,7 @@ namespace P1
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
             mostrarAnalogicoMenu.CheckState = CheckState.Checked;
+            OpcionesDespertadorDesactivar.Enabled = false;
         }
 
         private void MostrarHoraActual()
@@ -68,7 +71,7 @@ namespace P1
         {
             MostrarHoraActual();
 
-            if (!DespertadorActivado)
+            if (!m_DespertadorActivado)
                 return;
 
             if (!ct_Alarma.HoraValida)
@@ -158,9 +161,18 @@ namespace P1
             }
         }
 
-        private void DespertadorActivar_Click(object sender, EventArgs e)
+        private void OpcionesDespertadorActivar_Click(object sender, EventArgs e)
         {
-            this.DespertadorActivado = !this.DespertadorActivado;
+            m_DespertadorActivado = true;
+            OpcionesDespertadorActivar.Enabled = false;
+            OpcionesDespertadorDesactivar.Enabled = true;
+        }
+
+        private void OpcionesDespertadorDesactivar_Click(object sender, EventArgs e)
+        {
+            m_DespertadorActivado = false;
+            OpcionesDespertadorActivar.Enabled = true;
+            OpcionesDespertadorDesactivar.Enabled = false;
         }
     }
 }
