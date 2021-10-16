@@ -84,7 +84,7 @@ namespace P1
             // salirToolStripMenuItem
             // 
             this.salirToolStripMenuItem.Name = "salirToolStripMenuItem";
-            this.salirToolStripMenuItem.Size = new System.Drawing.Size(147, 34);
+            this.salirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.salirToolStripMenuItem.Text = "Salir";
             this.salirToolStripMenuItem.Click += new System.EventHandler(this.salir_Click);
             // 
@@ -107,21 +107,21 @@ namespace P1
             this.mostrarAnalogicoMenu.Checked = true;
             this.mostrarAnalogicoMenu.CheckState = System.Windows.Forms.CheckState.Checked;
             this.mostrarAnalogicoMenu.Name = "mostrarAnalogicoMenu";
-            this.mostrarAnalogicoMenu.Size = new System.Drawing.Size(261, 34);
+            this.mostrarAnalogicoMenu.Size = new System.Drawing.Size(270, 34);
             this.mostrarAnalogicoMenu.Text = "Mostrar Analógico";
             this.mostrarAnalogicoMenu.Click += new System.EventHandler(this.mostrarAnalogicoMenu_Click);
             // 
             // colorFondoToolStripMenuItem
             // 
             this.colorFondoToolStripMenuItem.Name = "colorFondoToolStripMenuItem";
-            this.colorFondoToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.colorFondoToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.colorFondoToolStripMenuItem.Text = "Color fondo";
             this.colorFondoToolStripMenuItem.Click += new System.EventHandler(this.colorFondoToolStripMenuItem_Click);
             // 
             // fuenteToolStripMenuItem
             // 
             this.fuenteToolStripMenuItem.Name = "fuenteToolStripMenuItem";
-            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.fuenteToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.fuenteToolStripMenuItem.Text = "Fuente";
             this.fuenteToolStripMenuItem.Click += new System.EventHandler(this.fuenteToolStripMenuItem_Click);
             // 
@@ -131,20 +131,22 @@ namespace P1
             this.OpcionesDespertadorActivar,
             this.OpcionesDespertadorDesactivar});
             this.despertadorToolStripMenuItem.Name = "despertadorToolStripMenuItem";
-            this.despertadorToolStripMenuItem.Size = new System.Drawing.Size(261, 34);
+            this.despertadorToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.despertadorToolStripMenuItem.Text = "Despertador";
             // 
             // OpcionesDespertadorActivar
             // 
             this.OpcionesDespertadorActivar.Name = "OpcionesDespertadorActivar";
-            this.OpcionesDespertadorActivar.Size = new System.Drawing.Size(195, 34);
+            this.OpcionesDespertadorActivar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.T)));
+            this.OpcionesDespertadorActivar.Size = new System.Drawing.Size(270, 34);
             this.OpcionesDespertadorActivar.Text = "Activar";
             this.OpcionesDespertadorActivar.Click += new System.EventHandler(this.OpcionesDespertadorActivar_Click);
             // 
             // OpcionesDespertadorDesactivar
             // 
             this.OpcionesDespertadorDesactivar.Name = "OpcionesDespertadorDesactivar";
-            this.OpcionesDespertadorDesactivar.Size = new System.Drawing.Size(195, 34);
+            this.OpcionesDespertadorDesactivar.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
+            this.OpcionesDespertadorDesactivar.Size = new System.Drawing.Size(270, 34);
             this.OpcionesDespertadorDesactivar.Text = "Desactivar";
             this.OpcionesDespertadorDesactivar.Click += new System.EventHandler(this.OpcionesDespertadorDesactivar_Click);
             // 
@@ -228,12 +230,12 @@ namespace P1
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(258, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(267, 6);
             // 
             // toolStripMenuItem2
             // 
             this.toolStripMenuItem2.Name = "toolStripMenuItem2";
-            this.toolStripMenuItem2.Size = new System.Drawing.Size(258, 6);
+            this.toolStripMenuItem2.Size = new System.Drawing.Size(267, 6);
             // 
             // menuZona
             // 
@@ -249,19 +251,23 @@ namespace P1
             // zonaAñadir
             // 
             this.zonaAñadir.Name = "zonaAñadir";
-            this.zonaAñadir.Size = new System.Drawing.Size(270, 34);
+            this.zonaAñadir.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.R)));
+            this.zonaAñadir.Size = new System.Drawing.Size(303, 34);
             this.zonaAñadir.Text = "Añadir";
             this.zonaAñadir.Click += new System.EventHandler(this.zonaAñadir_Click);
             // 
             // zonaSeparador
             // 
             this.zonaSeparador.Name = "zonaSeparador";
-            this.zonaSeparador.Size = new System.Drawing.Size(267, 6);
+            this.zonaSeparador.Size = new System.Drawing.Size(300, 6);
             // 
             // zonaEliminar
             // 
             this.zonaEliminar.Name = "zonaEliminar";
-            this.zonaEliminar.Size = new System.Drawing.Size(270, 34);
+            this.zonaEliminar.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Shift) 
+            | System.Windows.Forms.Keys.L)));
+            this.zonaEliminar.Size = new System.Drawing.Size(303, 34);
             this.zonaEliminar.Text = "Eliminar";
             this.zonaEliminar.Click += new System.EventHandler(this.zonaEliminar_Click);
             // 

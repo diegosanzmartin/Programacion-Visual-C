@@ -9,6 +9,7 @@ namespace P1
         private TimeSpan m_DesfaseHorario = new TimeSpan(0);
         RelojAnalogico m_RelojAnalogico = new RelojAnalogico();
         private bool m_DespertadorActivado = false;
+        private const int MaxZonas = 4;
         public bool DespertadorActivado
         {
             get { return m_DespertadorActivado; }
@@ -183,7 +184,7 @@ namespace P1
 
         private void menuZona_DropDownOpened(object sender, EventArgs e)
         {
-            if (NumeroZonas == 4)
+            if (NumeroZonas == MaxZonas)
                 zonaAñadir.Enabled = false;
             else
                 zonaAñadir.Enabled = true;
@@ -208,6 +209,12 @@ namespace P1
             // Especifique el manejador del evento Click de zonaNueva; la
             // respuesta a este evento vendrá dada por el método zona_Click.
             // Añada el elemento zonaNueva al menú menúZona.
+            if (this.NumeroZonas == MaxZonas)
+            {
+                Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
+                return;
+            }
+
             zonaNueva.Click += zona_Click;
             menuZona.DropDownItems.Add(zonaNueva);
             
@@ -220,6 +227,11 @@ namespace P1
 
         private void zonaEliminar_Click(object sender, EventArgs e)
         {
+            if (this.NumeroZonas == 0)
+            {
+                Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
+                return;
+            }
             menuZona.DropDownItems.RemoveAt(NumeroZonas+2);
         }
     }
