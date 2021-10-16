@@ -22,6 +22,12 @@ namespace P1
 
         }
 
+        public int NumeroZonas
+        {
+            get { return menuZona.DropDownItems.Count - 3; }
+        }
+
+
         public RelojDigital()
         {
             InitializeComponent();
@@ -173,6 +179,48 @@ namespace P1
             m_DespertadorActivado = false;
             OpcionesDespertadorActivar.Enabled = true;
             OpcionesDespertadorDesactivar.Enabled = false;
+        }
+
+        private void menuZona_DropDownOpened(object sender, EventArgs e)
+        {
+            if (NumeroZonas == 4)
+                zonaAñadir.Enabled = false;
+            else
+                zonaAñadir.Enabled = true;
+
+            if (NumeroZonas == 0)
+            {
+                zonaEliminar.Enabled = false;
+                zonaSeparador.Visible = false;
+            }
+            else
+            {
+                zonaEliminar.Enabled = true;
+                zonaSeparador.Visible = true;
+            }
+        }
+
+        private void zonaAñadir_Click(object sender, EventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine("zona nueva");
+            ToolStripMenuItem zonaNueva = new ToolStripMenuItem();
+            zonaNueva.Text = "Zona " + (this.NumeroZonas + 1);
+            // Especifique el manejador del evento Click de zonaNueva; la
+            // respuesta a este evento vendrá dada por el método zona_Click.
+            // Añada el elemento zonaNueva al menú menúZona.
+            zonaNueva.Click += zona_Click;
+            menuZona.DropDownItems.Add(zonaNueva);
+            
+        }
+        private void zona_Click(object sender, EventArgs e)
+        {
+            var zona = (ToolStripMenuItem)sender;
+            MessageBox.Show(zona.Text);
+        }
+
+        private void zonaEliminar_Click(object sender, EventArgs e)
+        {
+            menuZona.DropDownItems.RemoveAt(NumeroZonas+2);
         }
     }
 }
