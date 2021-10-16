@@ -8,6 +8,17 @@ namespace P1
     {
         private TimeSpan m_DesfaseHorario = new TimeSpan(0);
         RelojAnalogico m_RelojAnalogico = new RelojAnalogico();
+        private bool m_DespertadorActivado = false;
+        public bool DespertadorActivado
+        {
+            get { return m_DespertadorActivado; }
+            set
+            {
+                m_DespertadorActivado = value;
+                DespertadorActivar.Checked = m_DespertadorActivado;
+            }
+
+        }
 
         public RelojDigital()
         {
@@ -57,6 +68,9 @@ namespace P1
         {
             MostrarHoraActual();
 
+            if (!DespertadorActivado)
+                return;
+
             if (!ct_Alarma.HoraValida)
             {
                 System.Diagnostics.Debug.WriteLine("Hora alarma nó válida");
@@ -68,7 +82,7 @@ namespace P1
             // Segundos alarma:
             int segundosAlarma = horaAlarma.Second + horaAlarma.Minute * 60 + horaAlarma.Hour * 3600;
 
-            System.Diagnostics.Debug.WriteLine(segundosActual + " " + segundosAlarma);
+            //System.Diagnostics.Debug.WriteLine(segundosActual + " " + segundosAlarma);
             if (segundosActual >= segundosAlarma)
             {
                 if (segundosActual - segundosAlarma < 300)
@@ -144,7 +158,10 @@ namespace P1
             }
         }
 
-
+        private void DespertadorActivar_Click(object sender, EventArgs e)
+        {
+            this.DespertadorActivado = !this.DespertadorActivado;
+        }
     }
 }
 

@@ -47,6 +47,8 @@ namespace P1
             this.ct_Alarma = new P1.EditHora();
             this.label = new System.Windows.Forms.Label();
             this.bt_ZonaHoraria_Click = new System.Windows.Forms.Button();
+            this.despertadorToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.DespertadorActivar = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,6 +59,7 @@ namespace P1
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.OpcionesMenu,
+            this.despertadorToolStripMenuItem,
             this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
@@ -203,6 +206,21 @@ namespace P1
             this.bt_ZonaHoraria_Click.UseVisualStyleBackColor = true;
             this.bt_ZonaHoraria_Click.Click += new System.EventHandler(this.bt_ZonaHoraria_Click_Click);
             // 
+            // despertadorToolStripMenuItem
+            // 
+            this.despertadorToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.DespertadorActivar});
+            this.despertadorToolStripMenuItem.Name = "despertadorToolStripMenuItem";
+            this.despertadorToolStripMenuItem.Size = new System.Drawing.Size(127, 29);
+            this.despertadorToolStripMenuItem.Text = "Despertador";
+            // 
+            // DespertadorActivar
+            // 
+            this.DespertadorActivar.Name = "DespertadorActivar";
+            this.DespertadorActivar.Size = new System.Drawing.Size(270, 34);
+            this.DespertadorActivar.Text = "Activar";
+            this.DespertadorActivar.Click += new System.EventHandler(this.DespertadorActivar_Click);
+            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -247,6 +265,8 @@ namespace P1
         private EditHora ct_Alarma;
         private System.Windows.Forms.Label label;
         private System.Windows.Forms.Button bt_ZonaHoraria_Click;
+        private System.Windows.Forms.ToolStripMenuItem despertadorToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem DespertadorActivar;
     }
 }
 
