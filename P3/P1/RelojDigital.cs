@@ -234,6 +234,11 @@ namespace P1
             }
             menuZona.DropDownItems.RemoveAt(NumeroZonas+2);
         }
+
+        private void ct_Alarma_DoubleClick(object sender, EventArgs e)
+        {
+            menuContextoAlarma.Show(Cursor.Position);
+        }
     }
 }
 
