@@ -25,7 +25,7 @@ namespace P1
 
         public int NumeroZonas
         {
-            get { return menuZona.DropDownItems.Count - 3; }
+            get { return menuContextoZona.Items.Count - 3; }
         }
 
 
@@ -38,7 +38,6 @@ namespace P1
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
             mostrarAnalogicoMenu.CheckState = CheckState.Checked;
-            OpcionesDespertadorDesactivar.Enabled = false;
         }
 
         private void MostrarHoraActual()
@@ -216,7 +215,7 @@ namespace P1
             }
 
             zonaNueva.Click += zona_Click;
-            menuZona.DropDownItems.Add(zonaNueva);
+            menuContextoZona.Items.Add(zonaNueva);
             
         }
         private void zona_Click(object sender, EventArgs e)
@@ -232,12 +231,17 @@ namespace P1
                 Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
                 return;
             }
-            menuZona.DropDownItems.RemoveAt(NumeroZonas+2);
+            menuContextoZona.Items.RemoveAt(NumeroZonas+2);
         }
 
         private void ct_Alarma_DoubleClick(object sender, EventArgs e)
         {
             menuContextoAlarma.Show(Cursor.Position);
+        }
+
+        private void menuZona_Click(object sender, EventArgs e)
+        {
+            menuContextoZona.Show(Cursor.Position);
         }
     }
 }
