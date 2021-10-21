@@ -89,6 +89,15 @@ namespace P1.Properties {
         }
         
         /// <summary>
+        ///   Busca una cadena traducida similar a Añada/elimine una zona pulsando el botón derecho del ratón.
+        /// </summary>
+        internal static string mensajeBarraMenus {
+            get {
+                return ResourceManager.GetString("mensajeBarraMenus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Busca una cadena traducida similar a Práctica 1.
         /// </summary>
         internal static string textoAcercaDe1 {

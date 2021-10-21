@@ -57,8 +57,8 @@ namespace P1
             this.zonaAñadir = new System.Windows.Forms.ToolStripMenuItem();
             this.zonaEliminar = new System.Windows.Forms.ToolStripMenuItem();
             this.zonaSeparador = new System.Windows.Forms.ToolStripSeparator();
-            this.ct_Alarma = new P1.EditHora();
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
+            this.ct_Alarma = new P1.EditHora();
             this.menuStrip1.SuspendLayout();
             this.menuContextoAlarma.SuspendLayout();
             this.menuContextoZona.SuspendLayout();
@@ -75,16 +75,16 @@ namespace P1
             this.menuZona});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(524, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 36);
             this.menuStrip1.TabIndex = 0;
-            this.toolTip1.SetToolTip(this.menuStrip1, "Añada/elimine una zona pulsando el botón derecho del ratón");
+            this.toolTip1.SetToolTip(this.menuStrip1, "Texto");
             // 
             // archivoToolStripMenuItem
             // 
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -104,7 +104,7 @@ namespace P1
             this.toolStripMenuItem1,
             this.despertadorToolStripMenuItem});
             this.OpcionesMenu.Name = "OpcionesMenu";
-            this.OpcionesMenu.Size = new System.Drawing.Size(103, 29);
+            this.OpcionesMenu.Size = new System.Drawing.Size(103, 32);
             this.OpcionesMenu.Text = "Opciones";
             this.OpcionesMenu.DropDownOpened += new System.EventHandler(this.OpcionesMenu_DropDownOpened);
             // 
@@ -154,7 +154,7 @@ namespace P1
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
@@ -167,7 +167,7 @@ namespace P1
             // menuZona
             // 
             this.menuZona.Name = "menuZona";
-            this.menuZona.Size = new System.Drawing.Size(76, 29);
+            this.menuZona.Size = new System.Drawing.Size(76, 32);
             this.menuZona.Text = "Zonas";
             this.menuZona.DropDownOpened += new System.EventHandler(this.menuZona_DropDownOpened);
             this.menuZona.Click += new System.EventHandler(this.menuZona_Click);
@@ -324,6 +324,7 @@ namespace P1
             this.MaximizeBox = false;
             this.Name = "RelojDigital";
             this.Text = "Reloj Digital";
+            this.toolTip1.SetToolTip(this, "Texto");
             this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RelojDigital_MouseDown);
             this.menuStrip1.ResumeLayout(false);

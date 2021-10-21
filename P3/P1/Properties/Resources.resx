@@ -133,4 +133,7 @@
   <data name="AnalogicoON" xml:space="preserve">
     <value>Ocultar analogico</value>
   </data>
+  <data name="mensajeBarraMenus" xml:space="preserve">
+    <value>Añada/elimine una zona pulsando el botón derecho del ratón</value>
+  </data>
 </root>

@@ -2,6 +2,7 @@
 using System.Drawing;
 using System.Windows.Forms;
 
+
 namespace P1
 {
     public partial class RelojDigital : Form
@@ -38,6 +39,7 @@ namespace P1
             MostrarHoraActual();
             m_RelojAnalogico.Show(this);
             mostrarAnalogicoMenu.CheckState = CheckState.Checked;
+            this.toolTip1.SetToolTip(this.menuStrip1, Properties.Resources.mensajeBarraMenus);
         }
 
         private void MostrarHoraActual()
