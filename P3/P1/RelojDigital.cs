@@ -243,6 +243,14 @@ namespace P1
         {
             menuContextoZona.Show(Cursor.Position);
         }
+
+        private void RelojDigital_MouseDown(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Right)
+            {
+                menuContextoZona.Show(Cursor.Position);
+            }
+        }
     }
 }
 
