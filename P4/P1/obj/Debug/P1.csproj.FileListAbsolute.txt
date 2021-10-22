@@ -1,0 +1,35 @@
+C:\Users\Diego\source\repos\P1\P1\bin\Debug\P1.exe.config
+C:\Users\Diego\source\repos\P1\P1\bin\Debug\P1.exe
+C:\Users\Diego\source\repos\P1\P1\bin\Debug\P1.pdb
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.csproj.AssemblyReference.cache
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.RelojDigital.resources
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.Properties.Resources.resources
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.csproj.GenerateResource.cache
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.csproj.CoreCompileInputs.cache
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.exe
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.pdb
+C:\Users\Diego\source\repos\P1\P1\obj\Debug\P1.AcercaDe.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\bin\Debug\P1.exe.config
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\bin\Debug\P1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\bin\Debug\P1.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.AcercaDe.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.RelojDigital.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.Properties.Resources.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.csproj.GenerateResource.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P1\P1\obj\Debug\P1.RelojAnalogico.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\bin\Debug\P1.exe.config
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\bin\Debug\P1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\bin\Debug\P1.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.AcercaDe.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.RelojAnalogico.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.RelojDigital.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.Properties.Resources.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.csproj.GenerateResource.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P2\P1\obj\Debug\P1.pdb
