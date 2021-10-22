@@ -262,6 +262,12 @@ namespace P1
 
             }
         }
+
+        private void dlgEliminarZonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DlgEliminarZona dlg = new DlgEliminarZona();
+            dlg.ShowDialog();
+        }
     }
 }
 

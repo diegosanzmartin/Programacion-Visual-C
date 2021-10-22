@@ -59,6 +59,7 @@ namespace P1
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.cv_Despertador = new System.Windows.Forms.CheckBox();
             this.ct_Alarma = new P1.EditHora();
+            this.dlgEliminarZonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuContextoAlarma.SuspendLayout();
             this.menuContextoZona.SuspendLayout();
@@ -166,11 +167,12 @@ namespace P1
             // 
             // menuZona
             // 
+            this.menuZona.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.dlgEliminarZonaToolStripMenuItem});
             this.menuZona.Name = "menuZona";
             this.menuZona.Size = new System.Drawing.Size(76, 29);
             this.menuZona.Text = "Zonas";
             this.menuZona.DropDownOpened += new System.EventHandler(this.menuZona_DropDownOpened);
-            this.menuZona.Click += new System.EventHandler(this.menuZona_Click);
             // 
             // label1
             // 
@@ -231,13 +233,13 @@ namespace P1
             this.OpcionesDespertadorActivar,
             this.OpcionesDespertadorDesactivar});
             this.menuContextoAlarma.Name = "menuContextoAlarma";
-            this.menuContextoAlarma.Size = new System.Drawing.Size(241, 101);
+            this.menuContextoAlarma.Size = new System.Drawing.Size(166, 68);
             this.menuContextoAlarma.Opened += new System.EventHandler(this.menuContextoAlarma_Opened);
             // 
             // OpcionesDespertadorActivar
             // 
             this.OpcionesDespertadorActivar.Name = "OpcionesDespertadorActivar";
-            this.OpcionesDespertadorActivar.Size = new System.Drawing.Size(240, 32);
+            this.OpcionesDespertadorActivar.Size = new System.Drawing.Size(165, 32);
             this.OpcionesDespertadorActivar.Text = "Activar";
             this.OpcionesDespertadorActivar.Click += new System.EventHandler(this.OpcionesDespertadorActivar_Click);
             // 
@@ -245,7 +247,7 @@ namespace P1
             // 
             this.OpcionesDespertadorDesactivar.Enabled = false;
             this.OpcionesDespertadorDesactivar.Name = "OpcionesDespertadorDesactivar";
-            this.OpcionesDespertadorDesactivar.Size = new System.Drawing.Size(240, 32);
+            this.OpcionesDespertadorDesactivar.Size = new System.Drawing.Size(165, 32);
             this.OpcionesDespertadorDesactivar.Text = "Desactivar";
             this.OpcionesDespertadorDesactivar.Click += new System.EventHandler(this.OpcionesDespertadorDesactivar_Click);
             // 
@@ -307,6 +309,13 @@ namespace P1
             this.ct_Alarma.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.ct_Alarma.DoubleClick += new System.EventHandler(this.ct_Alarma_DoubleClick);
             // 
+            // dlgEliminarZonaToolStripMenuItem
+            // 
+            this.dlgEliminarZonaToolStripMenuItem.Name = "dlgEliminarZonaToolStripMenuItem";
+            this.dlgEliminarZonaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
+            this.dlgEliminarZonaToolStripMenuItem.Text = "DlgEliminarZona";
+            this.dlgEliminarZonaToolStripMenuItem.Click += new System.EventHandler(this.dlgEliminarZonaToolStripMenuItem_Click);
+            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -367,6 +376,7 @@ namespace P1
         private System.Windows.Forms.ToolStripSeparator zonaSeparador;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox cv_Despertador;
+        private System.Windows.Forms.ToolStripMenuItem dlgEliminarZonaToolStripMenuItem;
     }
 }
 

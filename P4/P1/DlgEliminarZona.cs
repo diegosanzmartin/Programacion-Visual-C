@@ -15,6 +15,7 @@ namespace P1
         public DlgEliminarZona()
         {
             InitializeComponent();
+            this.MinimumSize = this.Size;
         }
     }
 }
