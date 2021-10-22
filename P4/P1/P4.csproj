@@ -55,6 +55,13 @@
     <Compile Include="EditHora.cs">
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="DlgEliminarZona.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include=".Designer.cs">
+      <DependentUpon>DlgEliminarZona.cs</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="RelojAnalogico.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -80,6 +87,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="DlgDatosZona.resx">
       <DependentUpon>DlgDatosZona.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DlgEliminarZona.resx">
+      <DependentUpon>DlgEliminarZona.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="RelojAnalogico.resx">
       <DependentUpon>RelojAnalogico.cs</DependentUpon>
