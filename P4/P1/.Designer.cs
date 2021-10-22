@@ -33,14 +33,15 @@ namespace P1
             this.bt_Aceptar = new System.Windows.Forms.Button();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.ct_Diferencia = new P1.EditHora();
             this.lst_Zonas = new System.Windows.Forms.ListBox();
             this.label3 = new System.Windows.Forms.Label();
             this.ct_Signo = new System.Windows.Forms.TextBox();
+            this.ct_Diferencia = new P1.EditHora();
             this.SuspendLayout();
             // 
             // bt_Cancelar
             // 
+            this.bt_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.bt_Cancelar.Location = new System.Drawing.Point(333, 76);
             this.bt_Cancelar.Name = "bt_Cancelar";
@@ -51,6 +52,7 @@ namespace P1
             // 
             // bt_Aceptar
             // 
+            this.bt_Aceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Aceptar.Location = new System.Drawing.Point(333, 33);
             this.bt_Aceptar.Name = "bt_Aceptar";
             this.bt_Aceptar.Size = new System.Drawing.Size(88, 37);
@@ -69,6 +71,7 @@ namespace P1
             // 
             // label1
             // 
+            this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(31, 194);
             this.label1.Name = "label1";
@@ -76,8 +79,43 @@ namespace P1
             this.label1.TabIndex = 8;
             this.label1.Text = "Diferencia horaria:";
             // 
+            // lst_Zonas
+            // 
+            this.lst_Zonas.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.lst_Zonas.FormattingEnabled = true;
+            this.lst_Zonas.ItemHeight = 20;
+            this.lst_Zonas.Location = new System.Drawing.Point(35, 56);
+            this.lst_Zonas.Name = "lst_Zonas";
+            this.lst_Zonas.Size = new System.Drawing.Size(266, 124);
+            this.lst_Zonas.TabIndex = 13;
+            // 
+            // label3
+            // 
+            this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(31, 228);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(54, 20);
+            this.label3.TabIndex = 14;
+            this.label3.Text = "Signo:";
+            // 
+            // ct_Signo
+            // 
+            this.ct_Signo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.ct_Signo.Location = new System.Drawing.Point(91, 225);
+            this.ct_Signo.Name = "ct_Signo";
+            this.ct_Signo.ReadOnly = true;
+            this.ct_Signo.Size = new System.Drawing.Size(210, 26);
+            this.ct_Signo.TabIndex = 15;
+            this.ct_Signo.TabStop = false;
+            // 
             // ct_Diferencia
             // 
+            this.ct_Diferencia.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.ct_Diferencia.BeepOnError = true;
             this.ct_Diferencia.Hora = new System.DateTime(((long)(0)));
             this.ct_Diferencia.Location = new System.Drawing.Point(175, 191);
@@ -90,33 +128,6 @@ namespace P1
             this.ct_Diferencia.TabStop = false;
             this.ct_Diferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ct_Diferencia.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            // 
-            // lst_Zonas
-            // 
-            this.lst_Zonas.FormattingEnabled = true;
-            this.lst_Zonas.ItemHeight = 20;
-            this.lst_Zonas.Location = new System.Drawing.Point(35, 56);
-            this.lst_Zonas.Name = "lst_Zonas";
-            this.lst_Zonas.Size = new System.Drawing.Size(266, 124);
-            this.lst_Zonas.TabIndex = 13;
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 228);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 14;
-            this.label3.Text = "Signo:";
-            // 
-            // ct_Signo
-            // 
-            this.ct_Signo.Location = new System.Drawing.Point(91, 225);
-            this.ct_Signo.Name = "ct_Signo";
-            this.ct_Signo.ReadOnly = true;
-            this.ct_Signo.Size = new System.Drawing.Size(210, 26);
-            this.ct_Signo.TabIndex = 15;
-            this.ct_Signo.TabStop = false;
             // 
             // DlgEliminarZona
             // 
