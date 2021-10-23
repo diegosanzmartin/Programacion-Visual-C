@@ -16,6 +16,6 @@ namespace P1
         {
             InitializeComponent();
             this.MinimumSize = this.Size;
-        }
+        }        
     }
 }

@@ -336,7 +336,6 @@ namespace P1
             this.Name = "RelojDigital";
             this.Text = "Reloj Digital";
             this.toolTip1.SetToolTip(this, "Texto");
-            this.Load += new System.EventHandler(this.Form1_Load);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RelojDigital_MouseDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();

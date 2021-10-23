@@ -29,7 +29,6 @@ namespace P1
         /// </summary>
         private void InitializeComponent()
         {
-            this.ct_Diferencia = new P1.EditHora();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.ct_Nombre = new System.Windows.Forms.TextBox();
@@ -38,20 +37,8 @@ namespace P1
             this.bt_Positivo = new System.Windows.Forms.RadioButton();
             this.bt_Negativo = new System.Windows.Forms.RadioButton();
             this.label3 = new System.Windows.Forms.Label();
+            this.ct_Diferencia = new P1.EditHora();
             this.SuspendLayout();
-            // 
-            // ct_Diferencia
-            // 
-            this.ct_Diferencia.BeepOnError = true;
-            this.ct_Diferencia.Hora = new System.DateTime(((long)(0)));
-            this.ct_Diferencia.Location = new System.Drawing.Point(176, 79);
-            this.ct_Diferencia.Mask = "90:00:99";
-            this.ct_Diferencia.Name = "ct_Diferencia";
-            this.ct_Diferencia.PromptChar = '-';
-            this.ct_Diferencia.Size = new System.Drawing.Size(175, 26);
-            this.ct_Diferencia.TabIndex = 3;
-            this.ct_Diferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.ct_Diferencia.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // label1
             // 
@@ -82,7 +69,7 @@ namespace P1
             // 
             this.bt_Aceptar.Location = new System.Drawing.Point(399, 31);
             this.bt_Aceptar.Name = "bt_Aceptar";
-            this.bt_Aceptar.Size = new System.Drawing.Size(75, 37);
+            this.bt_Aceptar.Size = new System.Drawing.Size(88, 37);
             this.bt_Aceptar.TabIndex = 5;
             this.bt_Aceptar.Text = "Aceptar";
             this.bt_Aceptar.UseVisualStyleBackColor = true;
@@ -128,6 +115,19 @@ namespace P1
             this.label3.Size = new System.Drawing.Size(54, 20);
             this.label3.TabIndex = 4;
             this.label3.Text = "Signo:";
+            // 
+            // ct_Diferencia
+            // 
+            this.ct_Diferencia.BeepOnError = true;
+            this.ct_Diferencia.Hora = new System.DateTime(((long)(0)));
+            this.ct_Diferencia.Location = new System.Drawing.Point(176, 79);
+            this.ct_Diferencia.Mask = "90:00:99";
+            this.ct_Diferencia.Name = "ct_Diferencia";
+            this.ct_Diferencia.PromptChar = '-';
+            this.ct_Diferencia.Size = new System.Drawing.Size(175, 26);
+            this.ct_Diferencia.TabIndex = 3;
+            this.ct_Diferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.ct_Diferencia.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             // 
             // DlgDatosZona
             // 
