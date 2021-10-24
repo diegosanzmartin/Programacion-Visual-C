@@ -17,16 +17,12 @@ namespace P1
             InitializeComponent();
             this.MinimumSize = this.Size;
         }
-
+        List<RelojDigital.ZonaHoraria> m_Zonas = new List<RelojDigital.ZonaHoraria>();
         private int m_ZonaSeleccionada = -1;
         public int ZonaSeleccionada
         {
             get { return m_ZonaSeleccionada; }
         }
-
-
-        List<RelojDigital.ZonaHoraria> m_Zonas = new List<RelojDigital.ZonaHoraria>();
-
         private void DlgEliminarZona_Load(object sender, EventArgs e)
         {
             this.m_Zonas = ((RelojDigital)this.Owner).Zonas;
@@ -35,7 +31,6 @@ namespace P1
                 lst_Zonas.Items.Add(element.Nombre);
             }
         }
-
         private void lst_Zonas_SelectedIndexChanged(object sender, EventArgs e)
         {
             if(lst_Zonas.SelectedItem != null)
@@ -54,11 +49,9 @@ namespace P1
                 ct_Signo.Text = zonaSeleccionada.Positivo ? "Positivo" : "Negativo";
             }
         }
-
         private void bt_Aceptar_Click(object sender, EventArgs e)
         {
             m_ZonaSeleccionada = lst_Zonas.SelectedIndex;
-            MessageBox.Show(m_ZonaSeleccionada.ToString());
             this.DialogResult = DialogResult.OK;
         }
     }

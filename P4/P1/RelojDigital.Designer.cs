@@ -66,16 +66,15 @@ namespace P1
             // 
             // menuStrip1
             // 
-            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.archivoToolStripMenuItem,
             this.OpcionesMenu,
-            this.ayudaToolStripMenuItem,
-            this.menuZona});
+            this.menuZona,
+            this.ayudaToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(524, 36);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 33);
             this.menuStrip1.TabIndex = 0;
             this.toolTip1.SetToolTip(this.menuStrip1, "Texto");
             // 
@@ -84,7 +83,7 @@ namespace P1
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 30);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -104,7 +103,7 @@ namespace P1
             this.toolStripMenuItem1,
             this.despertadorToolStripMenuItem});
             this.OpcionesMenu.Name = "OpcionesMenu";
-            this.OpcionesMenu.Size = new System.Drawing.Size(103, 30);
+            this.OpcionesMenu.Size = new System.Drawing.Size(103, 29);
             this.OpcionesMenu.Text = "Opciones";
             this.OpcionesMenu.DropDownOpened += new System.EventHandler(this.OpcionesMenu_DropDownOpened);
             // 
@@ -154,22 +153,23 @@ namespace P1
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 30);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
             // 
             this.acercaDeToolStripMenuItem.Name = "acercaDeToolStripMenuItem";
-            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(191, 34);
+            this.acercaDeToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.acercaDeToolStripMenuItem.Text = "Acerca de";
             this.acercaDeToolStripMenuItem.Click += new System.EventHandler(this.AcercaDe);
             // 
             // menuZona
             // 
             this.menuZona.Name = "menuZona";
-            this.menuZona.Size = new System.Drawing.Size(76, 30);
+            this.menuZona.Size = new System.Drawing.Size(76, 29);
             this.menuZona.Text = "Zonas";
             this.menuZona.DropDownOpened += new System.EventHandler(this.menuZona_DropDownOpened);
+            this.menuZona.Click += new System.EventHandler(this.menuZona_Click);
             // 
             // label1
             // 

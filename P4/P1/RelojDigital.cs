@@ -25,6 +25,26 @@ namespace P1
             mostrarAnalogicoMenu.CheckState = CheckState.Checked;
             this.toolTip1.SetToolTip(this.menuStrip1, Properties.Resources.mensajeBarraMenus);
         }
+        private void RelojDigital_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (Stream stream =
+                File.Open("reloj.dat", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    m_Zonas = (List<ZonaHoraria>)bin.Deserialize(stream);
+                    foreach (var element in m_Zonas)
+                    {
+                        menuZona_Añadir(element.Nombre);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("No se leer el archivo. " + " Causa: " + ex.Message);
+            }
+        }
         private void RelojDigital_Shown(object sender, EventArgs e)
         {
             m_RelojAnalogico.Location = new Point(this.Location.X + 360, this.Location.Y);
@@ -35,6 +55,52 @@ namespace P1
             {
                 menuContextoZona.Show(Cursor.Position);
             }
+        }
+        private void RelojDigital_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                using (Stream stream =
+                File.Open("reloj.dat", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, m_Zonas);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("No se pudo crear el archivo de zonas. "
+                + " Causa: " + ex.Message);
+            }
+        }
+        private void salir_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        private void colorFondoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ColorDialog dlgColor = new ColorDialog();
+            //... Inicialización del diálogo
+            if (dlgColor.ShowDialog() == DialogResult.OK)
+            {
+                // ... Extracción de los datos introducidos por el usuario
+                ct_HoraActual.BackColor = dlgColor.Color;
+            }
+        }
+        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FontDialog dlgFont = new FontDialog();
+            //... Inicialización del diálogo
+            if (dlgFont.ShowDialog() == DialogResult.OK)
+            {
+                // ... Extracción de los datos introducidos por el usuario
+                ct_HoraActual.Font = dlgFont.Font;
+            }
+        }
+        private void AcercaDe(object sender, EventArgs e)
+        {
+            AcercaDe dlg = new AcercaDe();
+            dlg.ShowDialog();
         }
 
 
@@ -47,6 +113,7 @@ namespace P1
             else
                 m_RelojAnalogico.Show(this);
         }
+
 
         /* Hora */
         private TimeSpan m_DesfaseHorario = new TimeSpan(0);
@@ -86,12 +153,21 @@ namespace P1
             m_DespertadorActivado = true;
             OpcionesDespertadorActivar.Enabled = false;
             OpcionesDespertadorDesactivar.Enabled = true;
+            cv_Despertador.Checked = true;
         }
         private void OpcionesDespertadorDesactivar_Click(object sender, EventArgs e)
         {
             m_DespertadorActivado = false;
             OpcionesDespertadorActivar.Enabled = true;
             OpcionesDespertadorDesactivar.Enabled = false;
+            cv_Despertador.Checked = false;
+        }
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (cv_Despertador.Checked)
+                m_DespertadorActivado = true;
+            else
+                m_DespertadorActivado = false;
         }
         private void ct_Alarma_DoubleClick(object sender, EventArgs e)
         {
@@ -110,133 +186,6 @@ namespace P1
                 OpcionesDespertadorDesactivar.Enabled = false;
 
             }
-        }
-
-
-        /* Zonas */
-        [Serializable()]
-        public class ZonaHoraria
-        {
-            TimeSpan m_Diferencia = new TimeSpan();
-            bool m_Positivo = true;
-            string m_Nombre = "";
-
-            public string Nombre { get; set; }
-            public TimeSpan Diferencia { get; set; }
-            public bool Positivo { get; set; }
-        }
-        private List<ZonaHoraria> m_Zonas = new List<ZonaHoraria>();
-
-        public List<ZonaHoraria> Zonas
-        {
-            get { return m_Zonas; }
-        }
-        public int NumeroZonas
-        {
-            get { return m_Zonas.Count; }
-        }
-        private void dlgEliminarZonaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            DlgEliminarZona dlg = new DlgEliminarZona();
-            dlg.ShowDialog();
-        }
-        private void zonaAñadir_Click(object sender, EventArgs e)
-        {
-            ToolStripMenuItem zonaNueva = new ToolStripMenuItem();
-            DlgDatosZona m_DlgDatosZona = new DlgDatosZona();
-            m_DlgDatosZona.Owner = this;
-            
-            if(m_DlgDatosZona.ShowDialog(this) == DialogResult.OK)
-            {
-                bool existe = m_Zonas.Exists(
-                 delegate (ZonaHoraria zona) // predicado anónimo
-                 {
-                     return zona.Nombre == m_DlgDatosZona.Nombre;
-                 }
-                );
-                
-                if (existe)
-                {
-                    MessageBox.Show("Ya existe una zona llamada "
-                    + m_DlgDatosZona.Nombre);
-                    return; // salimos sin modificar nada
-                }
-
-                ZonaHoraria zonaListaN = new ZonaHoraria();
-
-                //zonaNueva.Text = "Zona " + (this.NumeroZonas + 1);
-                zonaNueva.Text = m_DlgDatosZona.Nombre;
-                zonaNueva.Click += zona_Click;
-                menuContextoZona.Items.Add(zonaNueva);
-
-                zonaListaN.Nombre = m_DlgDatosZona.Nombre;
-                zonaListaN.Diferencia = m_DlgDatosZona.Diferencia;
-                zonaListaN.Positivo = m_DlgDatosZona.Positivo;
-
-                Zonas.Add(zonaListaN);
-            }
-        }
-        private void zonaEliminar_Click(object sender, EventArgs e)
-        {
-            DlgEliminarZona m_DlgEliminarZona = new DlgEliminarZona();
-            if (this.NumeroZonas == 0)
-            {
-                Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
-                return;
-            }
-           if(m_DlgEliminarZona.ShowDialog(this) == DialogResult.OK)
-            {
-                menuContextoZona.Items.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada + 2);
-                m_Zonas.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada);
-            }
-        }
-        private void zona_Click(object sender, EventArgs e)
-        {
-            var zona = (ToolStripMenuItem)sender;
-            RelojDigital.ZonaHoraria zonaS = 
-            m_Zonas.Find(
-                delegate(ZonaHoraria z)
-                {
-                    return z.Nombre == zona.Text;
-                }
-            );
-
-            TimeSpan ZonaDiferencia = zonaS.Positivo ? zonaS.Diferencia : -zonaS.Diferencia;
-            DateTime ZonaHora = DateTime.Now + ZonaDiferencia;
-            
-            MessageBox.Show(zona.Text + ": " + ZonaHora.ToString());
-        }
-        private void menuZona_Click(object sender, EventArgs e)
-        {
-            menuContextoZona.Show(Cursor.Position);
-        }
-        private void menuZona_DropDownOpened(object sender, EventArgs e)
-        {
-            if (NumeroZonas == 0)
-            {
-                zonaEliminar.Enabled = false;
-                zonaSeparador.Visible = false;
-            }
-            else
-            {
-                zonaEliminar.Enabled = true;
-                zonaSeparador.Visible = true;
-            }
-        }
-
-
-
-
-        ////////////////////////////////////////////////////////////////////////////////
-
-        private void salir_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-        private void AcercaDe(object sender, EventArgs e)
-        {
-            AcercaDe dlg = new AcercaDe();
-            dlg.ShowDialog();
         }
         private void timer_Tick(object sender, EventArgs e)
         {
@@ -276,71 +225,119 @@ namespace P1
             else
                 mostrarAnalogicoMenu.CheckState = CheckState.Checked;
         }
-        private void colorFondoToolStripMenuItem_Click(object sender, EventArgs e)
+
+
+        /* Zonas */
+        [Serializable()]
+        public class ZonaHoraria
         {
-            ColorDialog dlgColor = new ColorDialog();
-            //... Inicialización del diálogo
-            if (dlgColor.ShowDialog() == DialogResult.OK)
+            TimeSpan m_Diferencia = new TimeSpan();
+            bool m_Positivo = true;
+            string m_Nombre = "";
+
+            public string Nombre { get; set; }
+            public TimeSpan Diferencia { get; set; }
+            public bool Positivo { get; set; }
+        }
+        private List<ZonaHoraria> m_Zonas = new List<ZonaHoraria>();
+        public List<ZonaHoraria> Zonas
+        {
+            get { return m_Zonas; }
+        }
+        public int NumeroZonas
+        {
+            get { return m_Zonas.Count; }
+        }
+        private void dlgEliminarZonaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            DlgEliminarZona dlg = new DlgEliminarZona();
+            dlg.ShowDialog();
+        }
+        private void zonaAñadir_Click(object sender, EventArgs e)
+        {
+            ZonaHoraria zonaListaN = new ZonaHoraria();
+            DlgDatosZona m_DlgDatosZona = new DlgDatosZona();
+            m_DlgDatosZona.Owner = this;
+            
+            if(m_DlgDatosZona.ShowDialog(this) == DialogResult.OK)
             {
-                // ... Extracción de los datos introducidos por el usuario
-                ct_HoraActual.BackColor = dlgColor.Color;
+                bool existe = m_Zonas.Exists(
+                 delegate (ZonaHoraria zona) // predicado anónimo
+                 {
+                     return zona.Nombre == m_DlgDatosZona.Nombre;
+                 }
+                );
+
+                if (existe)
+                {
+                    MessageBox.Show("Ya existe una zona llamada "
+                    + m_DlgDatosZona.Nombre);
+                    return; // salimos sin modificar nada
+                }
+
+                zonaListaN.Nombre = m_DlgDatosZona.Nombre;
+                zonaListaN.Diferencia = m_DlgDatosZona.Diferencia;
+                zonaListaN.Positivo = m_DlgDatosZona.Positivo;
+
+                Zonas.Add(zonaListaN);
+                menuZona_Añadir(m_DlgDatosZona.Nombre);
             }
         }
-        private void fuenteToolStripMenuItem_Click(object sender, EventArgs e)
+        private void menuZona_Añadir(string Nombre)
         {
-            FontDialog dlgFont = new FontDialog();
-            //... Inicialización del diálogo
-            if (dlgFont.ShowDialog() == DialogResult.OK)
+            ToolStripMenuItem zonaNueva = new ToolStripMenuItem();
+
+            //zonaNueva.Text = "Zona " + (this.NumeroZonas + 1);
+            zonaNueva.Text = Nombre;
+            zonaNueva.Click += zona_Click;
+            this.menuContextoZona.Items.Add(zonaNueva);
+        }
+        private void zonaEliminar_Click(object sender, EventArgs e)
+        {
+            DlgEliminarZona m_DlgEliminarZona = new DlgEliminarZona();
+            if (this.NumeroZonas == 0)
             {
-                // ... Extracción de los datos introducidos por el usuario
-                ct_HoraActual.Font = dlgFont.Font;
+                Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
+                return;
+            }
+           if(m_DlgEliminarZona.ShowDialog(this) == DialogResult.OK)
+            {
+                menuContextoZona.Items.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada + 3);
+                m_Zonas.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada);
             }
         }
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void zona_Click(object sender, EventArgs e)
         {
-            if (cv_Despertador.Checked)
-                m_DespertadorActivado = true;
+            var zona = (ToolStripMenuItem)sender;
+            RelojDigital.ZonaHoraria zonaS =
+            m_Zonas.Find(
+                delegate (ZonaHoraria z)
+                {
+                    return z.Nombre == zona.Text;
+                }
+            );
+
+            TimeSpan ZonaDiferencia = zonaS.Positivo ? zonaS.Diferencia : -zonaS.Diferencia;
+            DateTime ZonaHora = DateTime.Now + ZonaDiferencia;
+
+            MessageBox.Show(zona.Text + ": " + ZonaHora.ToString());
+        }
+        private void menuZona_Click(object sender, EventArgs e)
+        {
+            menuContextoZona.Show(Cursor.Position);
+        }
+        private void menuZona_DropDownOpened(object sender, EventArgs e)
+        {
+            if (NumeroZonas == 0)
+            {
+                zonaEliminar.Enabled = false;
+                zonaSeparador.Visible = false;
+            }
             else
-                m_DespertadorActivado = false;
-        }
-
-        private void RelojDigital_FormClosing(object sender, FormClosingEventArgs e)
-        {
-            try
             {
-                using (Stream stream =
-                File.Open("reloj.dat", FileMode.Create))
-                {
-                    BinaryFormatter bin = new BinaryFormatter();
-                    bin.Serialize(stream, m_Zonas);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("No se pudo crear el archivo de zonas. "
-                + " Causa: " + ex.Message);
-            }
-        }
-
-        private void RelojDigital_Load(object sender, EventArgs e)
-        {
-            try
-            {
-                using (Stream stream =
-                File.Open("reloj.dat", FileMode.Open))
-                {
-                    BinaryFormatter bin = new BinaryFormatter();
-                    m_Zonas = (List<ZonaHoraria>)bin.Deserialize(stream);
-                }
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine("No se leer el archivo. "
-                + " Causa: " + ex.Message);
+                zonaEliminar.Enabled = true;
+                zonaSeparador.Visible = true;
             }
         }
     }
 }
-
-
-
