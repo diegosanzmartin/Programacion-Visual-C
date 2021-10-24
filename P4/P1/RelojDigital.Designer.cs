@@ -84,7 +84,7 @@ namespace P1
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 30);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -104,7 +104,7 @@ namespace P1
             this.toolStripMenuItem1,
             this.despertadorToolStripMenuItem});
             this.OpcionesMenu.Name = "OpcionesMenu";
-            this.OpcionesMenu.Size = new System.Drawing.Size(103, 32);
+            this.OpcionesMenu.Size = new System.Drawing.Size(103, 30);
             this.OpcionesMenu.Text = "Opciones";
             this.OpcionesMenu.DropDownOpened += new System.EventHandler(this.OpcionesMenu_DropDownOpened);
             // 
@@ -154,7 +154,7 @@ namespace P1
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 30);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
@@ -167,7 +167,7 @@ namespace P1
             // menuZona
             // 
             this.menuZona.Name = "menuZona";
-            this.menuZona.Size = new System.Drawing.Size(76, 32);
+            this.menuZona.Size = new System.Drawing.Size(76, 30);
             this.menuZona.Text = "Zonas";
             this.menuZona.DropDownOpened += new System.EventHandler(this.menuZona_DropDownOpened);
             // 
@@ -326,6 +326,7 @@ namespace P1
             this.Name = "RelojDigital";
             this.Text = "Reloj Digital";
             this.toolTip1.SetToolTip(this, "Texto");
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.RelojDigital_FormClosing);
             this.Shown += new System.EventHandler(this.RelojDigital_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RelojDigital_MouseDown);
             this.menuStrip1.ResumeLayout(false);

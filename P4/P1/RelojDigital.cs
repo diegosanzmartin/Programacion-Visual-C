@@ -3,6 +3,11 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 
+//Serialización
+using System.IO;
+using System.Runtime.Serialization;
+using System.Runtime.Serialization.Formatters.Binary;
+
 
 namespace P1
 {
@@ -109,6 +114,7 @@ namespace P1
 
 
         /* Zonas */
+        [Serializable()]
         public class ZonaHoraria
         {
             TimeSpan m_Diferencia = new TimeSpan();
@@ -298,6 +304,23 @@ namespace P1
                 m_DespertadorActivado = false;
         }
 
+        private void RelojDigital_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            try
+            {
+                using (Stream stream =
+                File.Open("reloj.dat", FileMode.Create))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    bin.Serialize(stream, m_Zonas);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("No se pudo crear el archivo de zonas. "
+                + " Causa: " + ex.Message);
+            }
+        }
     }
 }
 
