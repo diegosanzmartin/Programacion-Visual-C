@@ -321,6 +321,24 @@ namespace P1
                 + " Causa: " + ex.Message);
             }
         }
+
+        private void RelojDigital_Load(object sender, EventArgs e)
+        {
+            try
+            {
+                using (Stream stream =
+                File.Open("reloj.dat", FileMode.Open))
+                {
+                    BinaryFormatter bin = new BinaryFormatter();
+                    m_Zonas = (List<ZonaHoraria>)bin.Deserialize(stream);
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("No se leer el archivo. "
+                + " Causa: " + ex.Message);
+            }
+        }
     }
 }
 
