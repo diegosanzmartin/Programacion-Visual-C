@@ -43,22 +43,23 @@ namespace P1
             // 
             this.bt_Cancelar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bt_Cancelar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.bt_Cancelar.Location = new System.Drawing.Point(333, 76);
+            this.bt_Cancelar.Location = new System.Drawing.Point(333, 99);
             this.bt_Cancelar.Name = "bt_Cancelar";
             this.bt_Cancelar.Size = new System.Drawing.Size(88, 37);
-            this.bt_Cancelar.TabIndex = 12;
+            this.bt_Cancelar.TabIndex = 2;
             this.bt_Cancelar.Text = "Cancelar";
             this.bt_Cancelar.UseVisualStyleBackColor = true;
             // 
             // bt_Aceptar
             // 
             this.bt_Aceptar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.bt_Aceptar.Location = new System.Drawing.Point(333, 33);
+            this.bt_Aceptar.Location = new System.Drawing.Point(333, 56);
             this.bt_Aceptar.Name = "bt_Aceptar";
             this.bt_Aceptar.Size = new System.Drawing.Size(88, 37);
-            this.bt_Aceptar.TabIndex = 11;
+            this.bt_Aceptar.TabIndex = 1;
             this.bt_Aceptar.Text = "Aceptar";
             this.bt_Aceptar.UseVisualStyleBackColor = true;
+            this.bt_Aceptar.Click += new System.EventHandler(this.bt_Aceptar_Click);
             // 
             // label2
             // 
@@ -73,10 +74,10 @@ namespace P1
             // 
             this.label1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(31, 194);
+            this.label1.Location = new System.Drawing.Point(31, 269);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(138, 20);
-            this.label1.TabIndex = 8;
+            this.label1.TabIndex = 3;
             this.label1.Text = "Diferencia horaria:";
             // 
             // lst_Zonas
@@ -88,28 +89,29 @@ namespace P1
             this.lst_Zonas.ItemHeight = 20;
             this.lst_Zonas.Location = new System.Drawing.Point(35, 56);
             this.lst_Zonas.Name = "lst_Zonas";
-            this.lst_Zonas.Size = new System.Drawing.Size(266, 124);
-            this.lst_Zonas.TabIndex = 13;
+            this.lst_Zonas.Size = new System.Drawing.Size(266, 204);
+            this.lst_Zonas.TabIndex = 0;
+            this.lst_Zonas.SelectedIndexChanged += new System.EventHandler(this.lst_Zonas_SelectedIndexChanged);
             // 
             // label3
             // 
             this.label3.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(31, 228);
+            this.label3.Location = new System.Drawing.Point(31, 301);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(54, 20);
-            this.label3.TabIndex = 14;
+            this.label3.TabIndex = 5;
             this.label3.Text = "Signo:";
             // 
             // ct_Signo
             // 
             this.ct_Signo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ct_Signo.Location = new System.Drawing.Point(91, 225);
+            this.ct_Signo.Location = new System.Drawing.Point(91, 298);
             this.ct_Signo.Name = "ct_Signo";
             this.ct_Signo.ReadOnly = true;
             this.ct_Signo.Size = new System.Drawing.Size(210, 26);
-            this.ct_Signo.TabIndex = 15;
+            this.ct_Signo.TabIndex = 6;
             this.ct_Signo.TabStop = false;
             // 
             // ct_Diferencia
@@ -118,13 +120,13 @@ namespace P1
             | System.Windows.Forms.AnchorStyles.Right)));
             this.ct_Diferencia.BeepOnError = true;
             this.ct_Diferencia.Hora = new System.DateTime(((long)(0)));
-            this.ct_Diferencia.Location = new System.Drawing.Point(175, 191);
+            this.ct_Diferencia.Location = new System.Drawing.Point(175, 266);
             this.ct_Diferencia.Mask = "90:00:99";
             this.ct_Diferencia.Name = "ct_Diferencia";
             this.ct_Diferencia.PromptChar = '-';
             this.ct_Diferencia.ReadOnly = true;
             this.ct_Diferencia.Size = new System.Drawing.Size(126, 26);
-            this.ct_Diferencia.TabIndex = 10;
+            this.ct_Diferencia.TabIndex = 4;
             this.ct_Diferencia.TabStop = false;
             this.ct_Diferencia.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.ct_Diferencia.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
@@ -133,7 +135,7 @@ namespace P1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 303);
+            this.ClientSize = new System.Drawing.Size(447, 349);
             this.Controls.Add(this.ct_Signo);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.lst_Zonas);
@@ -147,6 +149,7 @@ namespace P1
             this.MinimizeBox = false;
             this.Name = "DlgEliminarZona";
             this.Text = "Eliminar zona horaria";
+            this.Load += new System.EventHandler(this.DlgEliminarZona_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

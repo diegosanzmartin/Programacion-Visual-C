@@ -22,7 +22,7 @@ namespace P1
         }
         private void RelojDigital_Shown(object sender, EventArgs e)
         {
-            m_RelojAnalogico.Location = new Point(this.Location.X + 100 + 10, 1000);
+            m_RelojAnalogico.Location = new Point(this.Location.X + 360, this.Location.Y);
         }
         private void RelojDigital_MouseDown(object sender, MouseEventArgs e)
         {
@@ -120,6 +120,7 @@ namespace P1
             public bool Positivo { get; set; }
         }
         private List<ZonaHoraria> m_Zonas = new List<ZonaHoraria>();
+
         public List<ZonaHoraria> Zonas
         {
             get { return m_Zonas; }
@@ -171,22 +172,34 @@ namespace P1
         }
         private void zonaEliminar_Click(object sender, EventArgs e)
         {
+            DlgEliminarZona m_DlgEliminarZona = new DlgEliminarZona();
             if (this.NumeroZonas == 0)
             {
                 Console.Beep(); // o bien System.Media.SystemSounds.Beep.Play();
                 return;
             }
-            menuContextoZona.Items.RemoveAt(NumeroZonas + 2);
-            m_Zonas.RemoveAt(NumeroZonas-1);
+           if(m_DlgEliminarZona.ShowDialog(this) == DialogResult.OK)
+            {
+                menuContextoZona.Items.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada + 2);
+                m_Zonas.RemoveAt(m_DlgEliminarZona.ZonaSeleccionada);
+            }
         }
         private void zona_Click(object sender, EventArgs e)
         {
             var zona = (ToolStripMenuItem)sender;
+            RelojDigital.ZonaHoraria zonaS = 
+            m_Zonas.Find(
+                delegate(ZonaHoraria z)
+                {
+                    return z.Nombre == zona.Text;
+                }
+            );
+
+            TimeSpan ZonaDiferencia = zonaS.Positivo ? zonaS.Diferencia : -zonaS.Diferencia;
+            DateTime ZonaHora = DateTime.Now + ZonaDiferencia;
             
-            MessageBox.Show(zona.Text);
+            MessageBox.Show(zona.Text + ": " + ZonaHora.ToString());
         }
-
-
         private void menuZona_Click(object sender, EventArgs e)
         {
             menuContextoZona.Show(Cursor.Position);
@@ -287,5 +300,6 @@ namespace P1
 
     }
 }
+
 
 

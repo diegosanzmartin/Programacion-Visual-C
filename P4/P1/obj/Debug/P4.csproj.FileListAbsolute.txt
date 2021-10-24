@@ -1,6 +1,5 @@
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\bin\Debug\P1.exe
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\bin\Debug\P1.pdb
-C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P4.csproj.AssemblyReference.cache
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P1.AcercaDe.resources
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P1.DlgDatosZona.resources
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P1.DlgEliminarZona.resources
@@ -11,3 +10,4 @@ C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P4.csproj.Ge
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P4.csproj.CoreCompileInputs.cache
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P1.exe
 C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P1.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P4\P1\obj\Debug\P4.csproj.AssemblyReference.cache

@@ -59,7 +59,6 @@ namespace P1
             this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.cv_Despertador = new System.Windows.Forms.CheckBox();
             this.ct_Alarma = new P1.EditHora();
-            this.dlgEliminarZonaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.menuContextoAlarma.SuspendLayout();
             this.menuContextoZona.SuspendLayout();
@@ -76,7 +75,7 @@ namespace P1
             this.menuZona});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(524, 33);
+            this.menuStrip1.Size = new System.Drawing.Size(524, 36);
             this.menuStrip1.TabIndex = 0;
             this.toolTip1.SetToolTip(this.menuStrip1, "Texto");
             // 
@@ -85,7 +84,7 @@ namespace P1
             this.archivoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.salirToolStripMenuItem});
             this.archivoToolStripMenuItem.Name = "archivoToolStripMenuItem";
-            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 29);
+            this.archivoToolStripMenuItem.Size = new System.Drawing.Size(88, 32);
             this.archivoToolStripMenuItem.Text = "Archivo";
             // 
             // salirToolStripMenuItem
@@ -105,7 +104,7 @@ namespace P1
             this.toolStripMenuItem1,
             this.despertadorToolStripMenuItem});
             this.OpcionesMenu.Name = "OpcionesMenu";
-            this.OpcionesMenu.Size = new System.Drawing.Size(103, 29);
+            this.OpcionesMenu.Size = new System.Drawing.Size(103, 32);
             this.OpcionesMenu.Text = "Opciones";
             this.OpcionesMenu.DropDownOpened += new System.EventHandler(this.OpcionesMenu_DropDownOpened);
             // 
@@ -155,7 +154,7 @@ namespace P1
             this.ayudaToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.acercaDeToolStripMenuItem});
             this.ayudaToolStripMenuItem.Name = "ayudaToolStripMenuItem";
-            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 29);
+            this.ayudaToolStripMenuItem.Size = new System.Drawing.Size(79, 32);
             this.ayudaToolStripMenuItem.Text = "Ayuda";
             // 
             // acercaDeToolStripMenuItem
@@ -167,10 +166,8 @@ namespace P1
             // 
             // menuZona
             // 
-            this.menuZona.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.dlgEliminarZonaToolStripMenuItem});
             this.menuZona.Name = "menuZona";
-            this.menuZona.Size = new System.Drawing.Size(76, 29);
+            this.menuZona.Size = new System.Drawing.Size(76, 32);
             this.menuZona.Text = "Zonas";
             this.menuZona.DropDownOpened += new System.EventHandler(this.menuZona_DropDownOpened);
             // 
@@ -309,13 +306,6 @@ namespace P1
             this.ct_Alarma.TextMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
             this.ct_Alarma.DoubleClick += new System.EventHandler(this.ct_Alarma_DoubleClick);
             // 
-            // dlgEliminarZonaToolStripMenuItem
-            // 
-            this.dlgEliminarZonaToolStripMenuItem.Name = "dlgEliminarZonaToolStripMenuItem";
-            this.dlgEliminarZonaToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.dlgEliminarZonaToolStripMenuItem.Text = "DlgEliminarZona";
-            this.dlgEliminarZonaToolStripMenuItem.Click += new System.EventHandler(this.dlgEliminarZonaToolStripMenuItem_Click);
-            // 
             // RelojDigital
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -336,6 +326,7 @@ namespace P1
             this.Name = "RelojDigital";
             this.Text = "Reloj Digital";
             this.toolTip1.SetToolTip(this, "Texto");
+            this.Shown += new System.EventHandler(this.RelojDigital_Shown);
             this.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RelojDigital_MouseDown);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -375,7 +366,6 @@ namespace P1
         private System.Windows.Forms.ToolStripSeparator zonaSeparador;
         private System.Windows.Forms.ToolTip toolTip1;
         private System.Windows.Forms.CheckBox cv_Despertador;
-        private System.Windows.Forms.ToolStripMenuItem dlgEliminarZonaToolStripMenuItem;
     }
 }
 
