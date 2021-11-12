@@ -1,0 +1,12 @@
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\bin\Debug\Project.exe.config
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\bin\Debug\Project.exe
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\bin\Debug\Project.pdb
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.AcercaDe.resources
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.VisorImágenes.resources
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.exe
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.pdb
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.VentanaHija.resources
