@@ -44,6 +44,7 @@ namespace Project
             // m_PictureBox
             // 
             this.m_PictureBox.Location = new System.Drawing.Point(0, 0);
+            this.m_PictureBox.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.m_PictureBox.Name = "m_PictureBox";
             this.m_PictureBox.Size = new System.Drawing.Size(100, 50);
             this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
@@ -52,14 +53,17 @@ namespace Project
             // 
             // menuStrip1
             // 
+            this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
+            this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ImagenEscalaDeGrises});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(880, 35);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
+            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
             // 
             // ImagenEscalaDeGrises
             // 
@@ -71,46 +75,47 @@ namespace Project
             this.ImagenEscalaDeGrises.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.ImagenEscalaDeGrises.MergeIndex = 2;
             this.ImagenEscalaDeGrises.Name = "ImagenEscalaDeGrises";
-            this.ImagenEscalaDeGrises.Size = new System.Drawing.Size(59, 20);
+            this.ImagenEscalaDeGrises.Size = new System.Drawing.Size(88, 29);
             this.ImagenEscalaDeGrises.Text = "Imagen";
             // 
             // ImagenAjustar
             // 
             this.ImagenAjustar.Name = "ImagenAjustar";
-            this.ImagenAjustar.Size = new System.Drawing.Size(180, 22);
+            this.ImagenAjustar.Size = new System.Drawing.Size(237, 34);
             this.ImagenAjustar.Text = "Ajustar Ventana";
             this.ImagenAjustar.Click += new System.EventHandler(this.ImagenAjustar_Click);
             // 
             // ImagenRotar
             // 
             this.ImagenRotar.Name = "ImagenRotar";
-            this.ImagenRotar.Size = new System.Drawing.Size(180, 22);
+            this.ImagenRotar.Size = new System.Drawing.Size(237, 34);
             this.ImagenRotar.Text = "Rotar 90º";
             this.ImagenRotar.Click += new System.EventHandler(this.ImagenRotar_Click);
             // 
             // ImagenAñadirTexto
             // 
             this.ImagenAñadirTexto.Name = "ImagenAñadirTexto";
-            this.ImagenAñadirTexto.Size = new System.Drawing.Size(180, 22);
+            this.ImagenAñadirTexto.Size = new System.Drawing.Size(237, 34);
             this.ImagenAñadirTexto.Text = "Añadir Texto";
             this.ImagenAñadirTexto.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
             // escalaDeGrisesToolStripMenuItem
             // 
             this.escalaDeGrisesToolStripMenuItem.Name = "escalaDeGrisesToolStripMenuItem";
-            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(237, 34);
             this.escalaDeGrisesToolStripMenuItem.Text = "Escala de grises";
             this.escalaDeGrisesToolStripMenuItem.Click += new System.EventHandler(this.escalaDeGrisesToolStripMenuItem_Click);
             // 
             // VentanaHija
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(587, 428);
+            this.ClientSize = new System.Drawing.Size(880, 658);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.m_PictureBox);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VentanaHija";
             this.ShowIcon = false;
             this.ShowInTaskbar = false;

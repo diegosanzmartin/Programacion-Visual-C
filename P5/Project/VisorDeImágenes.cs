@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -70,5 +71,42 @@ namespace Project
             NuevaHija(título);
             this.HijaActiva.PictureBox.Image = Properties.Resources.Imágen1;
         }
+
+        private void ArchivoAbrir_Click(object sender, EventArgs e)
+        {
+            // Mostrar diálogo OpenFileDialog
+            OpenFileDialog dlg = new OpenFileDialog();
+
+            // Mediante la propiedad Filter indicamos el tipo de archivos
+            // que se permiten abrir y mediante Title especificamos
+            // un título explicativo para la ventana.
+            dlg.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+            dlg.Title = dlg.FileName;
+
+            // Si el resultado del diálogo es distinto de OK, terminar.
+            if (dlg.ShowDialog() != DialogResult.OK) return;
+
+            byte[] contenidoArchivo = File.ReadAllBytes(dlg.FileName);
+            // Creamos un flujo de tipo MemoryStream pasándole el contenido
+            // del archivo.
+            MemoryStream memoryArchivo = new MemoryStream(contenidoArchivo);
+
+            // Usamos el método FromStream de la clase Image para crear una
+            // "imagen" a partir del flujo anterior.
+            Image newImage = Image.FromStream(memoryArchivo);
+
+            // Creamos una nueva ventana hija con el método NuevaHija,
+            // pasándole como título el nombre del archivo abierto.
+            // (dlg.FileName)
+            NuevaHija(System.IO.Path.GetFileName(dlg.FileName));
+
+            // Obtenemos una referencia a la nueva ventana mediante la
+            // propiedad HijaActiva.
+            HijaActiva.PictureBox.Image = newImage;
+
+            // Asignamos "imagen" al picture box de la nueva ventana
+
+        }
+
     }
 }
