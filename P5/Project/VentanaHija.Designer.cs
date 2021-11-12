@@ -34,6 +34,7 @@ namespace Project
             this.imgenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAjustar = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenRotar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagenAñadirTexto = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,12 +57,14 @@ namespace Project
             this.menuStrip1.Size = new System.Drawing.Size(587, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
+            this.menuStrip1.Visible = false;
             // 
             // imgenToolStripMenuItem
             // 
             this.imgenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ImagenAjustar,
-            this.ImagenRotar});
+            this.ImagenRotar,
+            this.ImagenAñadirTexto});
             this.imgenToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.imgenToolStripMenuItem.MergeIndex = 2;
             this.imgenToolStripMenuItem.Name = "imgenToolStripMenuItem";
@@ -81,6 +84,13 @@ namespace Project
             this.ImagenRotar.Size = new System.Drawing.Size(180, 22);
             this.ImagenRotar.Text = "Rotar 90º";
             this.ImagenRotar.Click += new System.EventHandler(this.ImagenRotar_Click);
+            // 
+            // ImagenAñadirTexto
+            // 
+            this.ImagenAñadirTexto.Name = "ImagenAñadirTexto";
+            this.ImagenAñadirTexto.Size = new System.Drawing.Size(180, 22);
+            this.ImagenAñadirTexto.Text = "Añadir Texto";
+            this.ImagenAñadirTexto.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
             // VentanaHija
             // 
@@ -108,5 +118,6 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem imgenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ImagenAjustar;
         private System.Windows.Forms.ToolStripMenuItem ImagenRotar;
+        private System.Windows.Forms.ToolStripMenuItem ImagenAñadirTexto;
     }
 }
