@@ -21,5 +21,22 @@ namespace Project
         {
             get { return m_PictureBox; }
         }
+
+        private void ajustarVentanaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            // Si no estamos en modo ajustar, activamos este modo
+            if (this.PictureBox.SizeMode == PictureBoxSizeMode.AutoSize)
+            {
+                this.AutoScroll = false;
+                this.PictureBox.Size = this.ClientSize;
+                this.PictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+            }
+            // Si estamos en modo ajustar, desactivamos este modo
+            else if (this.PictureBox.SizeMode == PictureBoxSizeMode.StretchImage)
+            {
+                this.AutoScroll = true;
+                this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            }
+        }
     }
 }

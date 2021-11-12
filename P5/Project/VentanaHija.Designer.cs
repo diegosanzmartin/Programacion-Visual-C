@@ -74,6 +74,7 @@ namespace Project
             this.ajustarVentanaToolStripMenuItem.Name = "ajustarVentanaToolStripMenuItem";
             this.ajustarVentanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
             this.ajustarVentanaToolStripMenuItem.Text = "Ajustar Ventana";
+            this.ajustarVentanaToolStripMenuItem.Click += new System.EventHandler(this.ajustarVentanaToolStripMenuItem_Click);
             // 
             // VentanaHija
             // 
