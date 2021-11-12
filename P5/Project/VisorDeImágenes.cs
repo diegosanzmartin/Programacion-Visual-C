@@ -25,6 +25,10 @@ namespace Project
             hija.Show();
         }
 
+        public VentanaHija HijaActiva
+        {
+            get { return (VentanaHija)this.ActiveMdiChild; }
+        }
 
         //Ayuda
         private void Ayuda_Click(object sender, EventArgs e)
@@ -55,7 +59,7 @@ namespace Project
 
         private void ArchivoCerrar_Click(object sender, EventArgs e)
         {
-
+            this.HijaActiva.Close();
         }
 
         private void ArchivoNuevo_Click(object sender, EventArgs e)
