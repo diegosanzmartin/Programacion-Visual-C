@@ -9,3 +9,4 @@ C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project
 C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
 C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.exe
 C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.pdb
+C:\Users\Diego\Universidad\Programación Visual\Lab\P5\Project\obj\Debug\Project.VentanaHija.resources

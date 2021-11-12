@@ -52,19 +52,28 @@
     <Compile Include="Ayuda.Designer.cs">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form1.cs">
+    <Compile Include="VisorDeImágenes.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="VisorDeImágenes.Designer.cs">
+      <DependentUpon>VisorDeImágenes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="VentanaHija.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="VentanaHija.Designer.cs">
+      <DependentUpon>VentanaHija.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Ayuda.resx">
       <DependentUpon>Ayuda.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Form1.resx">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <EmbeddedResource Include="VentanaHija.resx">
+      <DependentUpon>VentanaHija.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="VisorDeImágenes.resx">
+      <DependentUpon>VisorDeImágenes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

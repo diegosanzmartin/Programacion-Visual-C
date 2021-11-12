@@ -16,6 +16,15 @@ namespace Project
         {
             InitializeComponent();
         }
+        private void NuevaHija(string título)
+        {
+            VentanaHija hija = new VentanaHija(título);
+            hija.MdiParent = this;
+            hija.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
+            hija.AutoScroll = true;
+            hija.Show();
+        }
+
 
         //Ayuda
         private void Ayuda_Click(object sender, EventArgs e)
@@ -51,7 +60,9 @@ namespace Project
 
         private void ArchivoNuevo_Click(object sender, EventArgs e)
         {
-
+            int númeroHijas = this.MdiChildren.Length;
+            string título = "Doc" + (númeroHijas + 1);
+            NuevaHija(título);
         }
     }
 }
