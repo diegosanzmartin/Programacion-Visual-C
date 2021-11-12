@@ -63,6 +63,8 @@ namespace Project
             // 
             this.imgenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ajustarVentanaToolStripMenuItem});
+            this.imgenToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.imgenToolStripMenuItem.MergeIndex = 2;
             this.imgenToolStripMenuItem.Name = "imgenToolStripMenuItem";
             this.imgenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.imgenToolStripMenuItem.Text = "Imagen";
