@@ -339,5 +339,62 @@ namespace P1
                 zonaSeparador.Visible = true;
             }
         }
+
+        /*
+        ·Propiedad ShortcutKeys de un ToolStripMenuItem -> acelerador a un control (Ctrl+A)
+        ·using(StreamReader sr= File.OpenText(ruta)) -> Se abre el fichero especificado por "ruta" & Al final se invoca auto Dispose para cerrar el fichero
+        ·Propiedad modificar el tamaño de una caja de texto -> Font
+        ·zonaAñadir boton derecho raton -> Tooltip1.setTooltip(this.menuMain, "Añade/elimine ...");
+        ·bt_Mostrar_Click{m_RelojAnalogico.Visible= !m_RelojAnalogico.Visible;}
+        ·public class MiClase{...}
+          public class Aplicacion{ public static void Main(){
+            MiClase objeto = new MiClase();
+            if(File.Exist("misObjetos.bin")){
+	        Stream fs = File.OpenRead("misObjetos.bin");
+	        Binaryformatter deseriador = new binaryformatter();
+	        MiClase nuevoObjeto;
+	        nuevoObjeto = (MiClase)deseriador Deseralize(fs);
+	        fs.Close()}}
+        ·Constructor inicie lista en ListBox, listBox1
+         public Form1(){InicializeComponent();listBox1.Items.AddRange(new string[] {"el1", "el2"});
+        ·Crear un ctNombre -> public partial class Form1:Form{ publ Form1(){InitializeComp();
+	        TextBox ctNombre = new TextBox();
+	        ctNombre Text = ¿nombre?
+	        ctNombre.Location = new Point(20,200);
+	        this.Controls.Add(ctnombre);
+	        ctNombre.Size = new Size(200,20);
+        ·Crear y mostrar dialogo modal/no modal de la clase Form2 -> Form2 dlg = new Form2(); 
+                                                                     dlg.ShowDialog()/dlg.Show();
+        ·Soltar botón pulsado de mouse ->
+            Mueve mouse ->
+            Pulsa botón de mouse ->
+        ·Evento F1-F2 -> KeyDown/Up
+            Evento pulsa tecla 8/enter/A -> KeyDown/Up/KeyPress
+        ·private void btAceptar_Click(object sender, EventArgs e){
+            if(listBox1.SelectedIndex != -1) ctTexto.Text = listBox1.SelectedItem.ToString();
+        ·Show de Form -> muestra una caja de diálogo no modal
+            Ventana modal -> hay que cerrarla para poder continuar
+            Ventana no modal -> se puede continuar sin cerrarla. No devuelve nada.
+            Show de Form, ShowDialog de Form -> muestra una caja de diálogo modal.
+            Devuelve un valor tipo DialogResult -> ShowDialog de Form
+        ·IsDispose -> vale true cuando el dialogo se destruye
+            Click en boton cerrar dlg no modal -> el dialogo se destruye
+            Para destruir un diálogo modal -> invoca a su método Dispose
+            Click en boton cerrar dlg modal -> el dialogo se oculta
+        ·private void Form1_Shown(obj send, EvetArg e){TextBox1.Focus()}
+        ·clases que componen configuración básica de una app -> EDI crea app
+            clase derivada de System.Windows.Forms Form
+            clase que contiene el método Main
+            otras clases para recursos y configuración de la app
+        ·ComboBox -> Items
+            TrackBar -> Value
+            RadioButton -> Checked
+            ListBox -> Items
+            TextBox -> ninguna valida
+            ScrollBarr -> Value
+            CheckBox -> Checked
+            ProgressBar -> Value
+            ThreeState -> CheckState
+         */
     }
 }
