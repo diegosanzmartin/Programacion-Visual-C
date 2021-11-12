@@ -1,0 +1,10 @@
+E:\EjercicioDeClase_2\bin\Debug\EjercicioDeClase_2.exe.config
+E:\EjercicioDeClase_2\bin\Debug\EjercicioDeClase_2.exe
+E:\EjercicioDeClase_2\bin\Debug\EjercicioDeClase_2.pdb
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.1.csproj.AssemblyReference.cache
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.Form1.resources
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.Properties.Resources.resources
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.1.csproj.GenerateResource.cache
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.1.csproj.CoreCompileInputs.cache
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.exe
+E:\EjercicioDeClase_2\obj\Debug\EjercicioDeClase_2.pdb
