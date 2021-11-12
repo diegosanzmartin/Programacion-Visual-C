@@ -31,15 +31,15 @@ namespace Project
         {
             this.Menú = new System.Windows.Forms.MenuStrip();
             this.Archivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.Ver = new System.Windows.Forms.ToolStripMenuItem();
-            this.Ventana = new System.Windows.Forms.ToolStripMenuItem();
-            this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.VentanaCascada = new System.Windows.Forms.ToolStripMenuItem();
-            this.VentanaMosaicoHorizontal = new System.Windows.Forms.ToolStripMenuItem();
-            this.VentanaMosaicoVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.ArchivoSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.ArchivoCerrar = new System.Windows.Forms.ToolStripMenuItem();
             this.ArchivoNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ver = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ventana = new System.Windows.Forms.ToolStripMenuItem();
+            this.VentanaCascada = new System.Windows.Forms.ToolStripMenuItem();
+            this.VentanaMosaicoHorizontal = new System.Windows.Forms.ToolStripMenuItem();
+            this.VentanaMosaicoVertical = new System.Windows.Forms.ToolStripMenuItem();
+            this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.Menú.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -53,7 +53,7 @@ namespace Project
             this.Menú.Location = new System.Drawing.Point(0, 0);
             this.Menú.MdiWindowListItem = this.Ventana;
             this.Menú.Name = "Menú";
-            this.Menú.Size = new System.Drawing.Size(800, 24);
+            this.Menú.Size = new System.Drawing.Size(924, 24);
             this.Menú.TabIndex = 0;
             this.Menú.Text = "menuStrip1";
             // 
@@ -66,6 +66,27 @@ namespace Project
             this.Archivo.Name = "Archivo";
             this.Archivo.Size = new System.Drawing.Size(60, 20);
             this.Archivo.Text = "Archivo";
+            // 
+            // ArchivoSalir
+            // 
+            this.ArchivoSalir.Name = "ArchivoSalir";
+            this.ArchivoSalir.Size = new System.Drawing.Size(109, 22);
+            this.ArchivoSalir.Text = "Salir";
+            this.ArchivoSalir.Click += new System.EventHandler(this.ArchivoSalir_Click);
+            // 
+            // ArchivoCerrar
+            // 
+            this.ArchivoCerrar.Name = "ArchivoCerrar";
+            this.ArchivoCerrar.Size = new System.Drawing.Size(109, 22);
+            this.ArchivoCerrar.Text = "Cerrar";
+            this.ArchivoCerrar.Click += new System.EventHandler(this.ArchivoCerrar_Click);
+            // 
+            // ArchivoNuevo
+            // 
+            this.ArchivoNuevo.Name = "ArchivoNuevo";
+            this.ArchivoNuevo.Size = new System.Drawing.Size(109, 22);
+            this.ArchivoNuevo.Text = "Nuevo";
+            this.ArchivoNuevo.Click += new System.EventHandler(this.ArchivoNuevo_Click);
             // 
             // Ver
             // 
@@ -83,6 +104,27 @@ namespace Project
             this.Ventana.Size = new System.Drawing.Size(61, 20);
             this.Ventana.Text = "Ventana";
             // 
+            // VentanaCascada
+            // 
+            this.VentanaCascada.Name = "VentanaCascada";
+            this.VentanaCascada.Size = new System.Drawing.Size(175, 22);
+            this.VentanaCascada.Text = "Cascada";
+            this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
+            // 
+            // VentanaMosaicoHorizontal
+            // 
+            this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
+            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(175, 22);
+            this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
+            this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
+            // 
+            // VentanaMosaicoVertical
+            // 
+            this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
+            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(175, 22);
+            this.VentanaMosaicoVertical.Text = "Mosaico vertical";
+            this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
+            // 
             // Ayuda
             // 
             this.Ayuda.Name = "Ayuda";
@@ -90,53 +132,11 @@ namespace Project
             this.Ayuda.Text = "Ayuda";
             this.Ayuda.Click += new System.EventHandler(this.Ayuda_Click);
             // 
-            // VentanaCascada
-            // 
-            this.VentanaCascada.Name = "VentanaCascada";
-            this.VentanaCascada.Size = new System.Drawing.Size(180, 22);
-            this.VentanaCascada.Text = "Cascada";
-            this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
-            // 
-            // VentanaMosaicoHorizontal
-            // 
-            this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
-            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(180, 22);
-            this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
-            this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
-            // 
-            // VentanaMosaicoVertical
-            // 
-            this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
-            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(180, 22);
-            this.VentanaMosaicoVertical.Text = "Mosaico vertical";
-            this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
-            // 
-            // ArchivoSalir
-            // 
-            this.ArchivoSalir.Name = "ArchivoSalir";
-            this.ArchivoSalir.Size = new System.Drawing.Size(180, 22);
-            this.ArchivoSalir.Text = "Salir";
-            this.ArchivoSalir.Click += new System.EventHandler(this.ArchivoSalir_Click);
-            // 
-            // ArchivoCerrar
-            // 
-            this.ArchivoCerrar.Name = "ArchivoCerrar";
-            this.ArchivoCerrar.Size = new System.Drawing.Size(180, 22);
-            this.ArchivoCerrar.Text = "Cerrar";
-            this.ArchivoCerrar.Click += new System.EventHandler(this.ArchivoCerrar_Click);
-            // 
-            // ArchivoNuevo
-            // 
-            this.ArchivoNuevo.Name = "ArchivoNuevo";
-            this.ArchivoNuevo.Size = new System.Drawing.Size(180, 22);
-            this.ArchivoNuevo.Text = "Nuevo";
-            this.ArchivoNuevo.Click += new System.EventHandler(this.ArchivoNuevo_Click);
-            // 
             // VisorImágenes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(924, 607);
             this.Controls.Add(this.Menú);
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.Menú;

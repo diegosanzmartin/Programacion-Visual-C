@@ -67,6 +67,7 @@ namespace Project
             int númeroHijas = this.MdiChildren.Length;
             string título = "Doc" + (númeroHijas + 1);
             NuevaHija(título);
+            this.HijaActiva.PictureBox.Image = Properties.Resources.Imágen1;
         }
     }
 }

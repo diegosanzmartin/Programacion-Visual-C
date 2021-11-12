@@ -16,7 +16,7 @@ namespace Project
             InitializeComponent();
             this.Text = String.Format("Acerca de {0}", AssemblyTitle);
             this.labelProductName.Text = "Visdor de Imágenes";
-            this.labelVersion.Text = "Versión 9.1.1";
+            this.labelVersion.Text = "Versión 9.2";
             this.labelCopyright.Text = AssemblyCopyright;
             this.labelCompanyName.Text = AssemblyCompany;
             this.textBoxDescription.Text = AssemblyDescription;

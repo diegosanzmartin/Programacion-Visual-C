@@ -40,7 +40,8 @@ namespace Project
             | System.Windows.Forms.AnchorStyles.Right)));
             this.m_PictureBox.Location = new System.Drawing.Point(0, 0);
             this.m_PictureBox.Name = "m_PictureBox";
-            this.m_PictureBox.Size = new System.Drawing.Size(457, 284);
+            this.m_PictureBox.Size = new System.Drawing.Size(565, 394);
+            this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.m_PictureBox.TabIndex = 0;
             this.m_PictureBox.TabStop = false;
             // 
@@ -48,12 +49,13 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(458, 286);
+            this.ClientSize = new System.Drawing.Size(566, 396);
             this.Controls.Add(this.m_PictureBox);
             this.Name = "VentanaHija";
             this.Text = "Form2";
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
