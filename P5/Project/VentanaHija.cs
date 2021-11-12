@@ -38,5 +38,11 @@ namespace Project
                 this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             }
         }
+
+        private void VentanaHija_Resize(object sender, EventArgs e)
+        {
+            if (this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom)
+                this.PictureBox.Size = this.ClientSize;
+        }
     }
 }

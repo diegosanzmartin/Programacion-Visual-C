@@ -39,12 +39,9 @@ namespace Project
             // 
             // m_PictureBox
             // 
-            this.m_PictureBox.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.m_PictureBox.Location = new System.Drawing.Point(1, 0);
+            this.m_PictureBox.Location = new System.Drawing.Point(0, 0);
             this.m_PictureBox.Name = "m_PictureBox";
-            this.m_PictureBox.Size = new System.Drawing.Size(565, 394);
+            this.m_PictureBox.Size = new System.Drawing.Size(100, 50);
             this.m_PictureBox.SizeMode = System.Windows.Forms.PictureBoxSizeMode.AutoSize;
             this.m_PictureBox.TabIndex = 0;
             this.m_PictureBox.TabStop = false;
@@ -55,7 +52,7 @@ namespace Project
             this.imgenToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(566, 24);
+            this.menuStrip1.Size = new System.Drawing.Size(587, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             // 
@@ -80,12 +77,13 @@ namespace Project
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(566, 396);
+            this.ClientSize = new System.Drawing.Size(587, 428);
             this.Controls.Add(this.m_PictureBox);
             this.Controls.Add(this.menuStrip1);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VentanaHija";
             this.Text = "Form2";
+            this.Resize += new System.EventHandler(this.VentanaHija_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
