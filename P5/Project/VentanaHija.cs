@@ -29,10 +29,10 @@ namespace Project
             {
                 this.AutoScroll = false;
                 this.PictureBox.Size = this.ClientSize;
-                this.PictureBox.SizeMode = PictureBoxSizeMode.StretchImage;
+                this.PictureBox.SizeMode = PictureBoxSizeMode.Zoom;
             }
             // Si estamos en modo ajustar, desactivamos este modo
-            else if (this.PictureBox.SizeMode == PictureBoxSizeMode.StretchImage)
+            else if (this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom)
             {
                 this.AutoScroll = true;
                 this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
