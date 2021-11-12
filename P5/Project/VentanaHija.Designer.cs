@@ -29,12 +29,14 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaHija));
             this.m_PictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.imgenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagenEscalaDeGrises = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAjustar = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenRotar = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAñadirTexto = new System.Windows.Forms.ToolStripMenuItem();
+            this.escalaDeGrisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -51,7 +53,7 @@ namespace Project
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.imgenToolStripMenuItem});
+            this.ImagenEscalaDeGrises});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(587, 24);
@@ -59,17 +61,18 @@ namespace Project
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
             // 
-            // imgenToolStripMenuItem
+            // ImagenEscalaDeGrises
             // 
-            this.imgenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ImagenEscalaDeGrises.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.ImagenAjustar,
             this.ImagenRotar,
-            this.ImagenAñadirTexto});
-            this.imgenToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
-            this.imgenToolStripMenuItem.MergeIndex = 2;
-            this.imgenToolStripMenuItem.Name = "imgenToolStripMenuItem";
-            this.imgenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
-            this.imgenToolStripMenuItem.Text = "Imagen";
+            this.ImagenAñadirTexto,
+            this.escalaDeGrisesToolStripMenuItem});
+            this.ImagenEscalaDeGrises.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.ImagenEscalaDeGrises.MergeIndex = 2;
+            this.ImagenEscalaDeGrises.Name = "ImagenEscalaDeGrises";
+            this.ImagenEscalaDeGrises.Size = new System.Drawing.Size(59, 20);
+            this.ImagenEscalaDeGrises.Text = "Imagen";
             // 
             // ImagenAjustar
             // 
@@ -92,6 +95,13 @@ namespace Project
             this.ImagenAñadirTexto.Text = "Añadir Texto";
             this.ImagenAñadirTexto.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
+            // escalaDeGrisesToolStripMenuItem
+            // 
+            this.escalaDeGrisesToolStripMenuItem.Name = "escalaDeGrisesToolStripMenuItem";
+            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.escalaDeGrisesToolStripMenuItem.Text = "Escala de grises";
+            this.escalaDeGrisesToolStripMenuItem.Click += new System.EventHandler(this.escalaDeGrisesToolStripMenuItem_Click);
+            // 
             // VentanaHija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -99,8 +109,11 @@ namespace Project
             this.ClientSize = new System.Drawing.Size(587, 428);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.m_PictureBox);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VentanaHija";
+            this.ShowIcon = false;
+            this.ShowInTaskbar = false;
             this.Text = "Form2";
             this.Resize += new System.EventHandler(this.VentanaHija_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).EndInit();
@@ -115,9 +128,10 @@ namespace Project
 
         private System.Windows.Forms.PictureBox m_PictureBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem imgenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ImagenEscalaDeGrises;
         private System.Windows.Forms.ToolStripMenuItem ImagenAjustar;
         private System.Windows.Forms.ToolStripMenuItem ImagenRotar;
         private System.Windows.Forms.ToolStripMenuItem ImagenAñadirTexto;
+        private System.Windows.Forms.ToolStripMenuItem escalaDeGrisesToolStripMenuItem;
     }
 }

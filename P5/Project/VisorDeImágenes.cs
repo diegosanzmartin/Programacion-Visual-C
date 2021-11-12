@@ -59,7 +59,8 @@ namespace Project
 
         private void ArchivoCerrar_Click(object sender, EventArgs e)
         {
-            this.HijaActiva.Close();
+            if (this.HijaActiva != null)
+                this.HijaActiva.Close();
         }
 
         private void ArchivoNuevo_Click(object sender, EventArgs e)

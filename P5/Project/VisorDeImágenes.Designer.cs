@@ -29,6 +29,7 @@ namespace Project
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisorImágenes));
             this.Menú = new System.Windows.Forms.MenuStrip();
             this.Archivo = new System.Windows.Forms.ToolStripMenuItem();
             this.ArchivoSalir = new System.Windows.Forms.ToolStripMenuItem();
@@ -138,6 +139,7 @@ namespace Project
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(924, 607);
             this.Controls.Add(this.Menú);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.Menú;
             this.Name = "VisorImágenes";
