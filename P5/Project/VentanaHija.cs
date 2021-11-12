@@ -45,5 +45,11 @@ namespace Project
             if (this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom)
                 this.PictureBox.Size = this.ClientSize;
         }
+
+        private void ImagenRotar_Click(object sender, EventArgs e)
+        {
+            this.PictureBox.Image.RotateFlip(RotateFlipType.Rotate90FlipNone);
+            this.PictureBox.Refresh();
+        }
     }
 }

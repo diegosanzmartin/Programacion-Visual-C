@@ -33,6 +33,7 @@ namespace Project
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.imgenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAjustar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagenRotar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,7 +60,8 @@ namespace Project
             // imgenToolStripMenuItem
             // 
             this.imgenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ImagenAjustar});
+            this.ImagenAjustar,
+            this.ImagenRotar});
             this.imgenToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.imgenToolStripMenuItem.MergeIndex = 2;
             this.imgenToolStripMenuItem.Name = "imgenToolStripMenuItem";
@@ -73,13 +75,20 @@ namespace Project
             this.ImagenAjustar.Text = "Ajustar Ventana";
             this.ImagenAjustar.Click += new System.EventHandler(this.ImagenAjustar_Click);
             // 
+            // ImagenRotar
+            // 
+            this.ImagenRotar.Name = "ImagenRotar";
+            this.ImagenRotar.Size = new System.Drawing.Size(180, 22);
+            this.ImagenRotar.Text = "Rotar 90º";
+            this.ImagenRotar.Click += new System.EventHandler(this.ImagenRotar_Click);
+            // 
             // VentanaHija
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(587, 428);
-            this.Controls.Add(this.m_PictureBox);
             this.Controls.Add(this.menuStrip1);
+            this.Controls.Add(this.m_PictureBox);
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "VentanaHija";
             this.Text = "Form2";
@@ -98,5 +107,6 @@ namespace Project
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem imgenToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem ImagenAjustar;
+        private System.Windows.Forms.ToolStripMenuItem ImagenRotar;
     }
 }
