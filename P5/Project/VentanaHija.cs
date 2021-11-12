@@ -22,7 +22,7 @@ namespace Project
             get { return m_PictureBox; }
         }
 
-        private void ajustarVentanaToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ImagenAjustar_Click(object sender, EventArgs e)
         {
             // Si no estamos en modo ajustar, activamos este modo
             if (this.PictureBox.SizeMode == PictureBoxSizeMode.AutoSize)
@@ -37,6 +37,7 @@ namespace Project
                 this.AutoScroll = true;
                 this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             }
+            ImagenAjustar.Checked = this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom;
         }
 
         private void VentanaHija_Resize(object sender, EventArgs e)

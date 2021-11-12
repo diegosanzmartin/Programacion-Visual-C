@@ -32,7 +32,7 @@ namespace Project
             this.m_PictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.imgenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.ajustarVentanaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagenAjustar = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -59,19 +59,19 @@ namespace Project
             // imgenToolStripMenuItem
             // 
             this.imgenToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.ajustarVentanaToolStripMenuItem});
+            this.ImagenAjustar});
             this.imgenToolStripMenuItem.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.imgenToolStripMenuItem.MergeIndex = 2;
             this.imgenToolStripMenuItem.Name = "imgenToolStripMenuItem";
             this.imgenToolStripMenuItem.Size = new System.Drawing.Size(59, 20);
             this.imgenToolStripMenuItem.Text = "Imagen";
             // 
-            // ajustarVentanaToolStripMenuItem
+            // ImagenAjustar
             // 
-            this.ajustarVentanaToolStripMenuItem.Name = "ajustarVentanaToolStripMenuItem";
-            this.ajustarVentanaToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.ajustarVentanaToolStripMenuItem.Text = "Ajustar Ventana";
-            this.ajustarVentanaToolStripMenuItem.Click += new System.EventHandler(this.ajustarVentanaToolStripMenuItem_Click);
+            this.ImagenAjustar.Name = "ImagenAjustar";
+            this.ImagenAjustar.Size = new System.Drawing.Size(180, 22);
+            this.ImagenAjustar.Text = "Ajustar Ventana";
+            this.ImagenAjustar.Click += new System.EventHandler(this.ImagenAjustar_Click);
             // 
             // VentanaHija
             // 
@@ -97,6 +97,6 @@ namespace Project
         private System.Windows.Forms.PictureBox m_PictureBox;
         private System.Windows.Forms.MenuStrip menuStrip1;
         private System.Windows.Forms.ToolStripMenuItem imgenToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem ajustarVentanaToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ImagenAjustar;
     }
 }
