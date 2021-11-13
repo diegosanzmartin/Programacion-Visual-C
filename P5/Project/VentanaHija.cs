@@ -125,17 +125,15 @@ namespace Project
             else if (dlgGuardar.FileName.ToUpper().EndsWith(".BMP"))
                 this.PictureBox.Image.Save(dlgGuardar.FileName);
             // Actualizar el título de esta ventana.
-            this.Name = "Saved";
+            this.Text = System.IO.Path.GetFileName(dlgGuardar.FileName);
+            this.PictureBox.Image.Tag = dlgGuardar.FileName;
         }
 
         private void ArchivoGuardar_Click(object sender, EventArgs e)
         {
             if (this.Text.StartsWith("Doc")) GuardarComo();
             else
-            {
-                MessageBox.Show(this.PictureBox.Image.Tag.ToString());
                 this.PictureBox.Image.Save(this.PictureBox.Image.Tag.ToString());
-            }
         }
 
         private void VentanaHija_FormClosed(object sender, FormClosedEventArgs e)

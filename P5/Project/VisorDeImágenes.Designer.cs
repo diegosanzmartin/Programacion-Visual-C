@@ -32,16 +32,16 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VisorImágenes));
             this.Menú = new System.Windows.Forms.MenuStrip();
             this.Archivo = new System.Windows.Forms.ToolStripMenuItem();
-            this.ArchivoSalir = new System.Windows.Forms.ToolStripMenuItem();
-            this.ArchivoCerrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.ArchivoNuevo = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArchivoCerrar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArchivoSalir = new System.Windows.Forms.ToolStripMenuItem();
             this.Ver = new System.Windows.Forms.ToolStripMenuItem();
             this.Ventana = new System.Windows.Forms.ToolStripMenuItem();
             this.VentanaCascada = new System.Windows.Forms.ToolStripMenuItem();
             this.VentanaMosaicoHorizontal = new System.Windows.Forms.ToolStripMenuItem();
             this.VentanaMosaicoVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
-            this.abrirToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.Menú.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -57,7 +57,7 @@ namespace Project
             this.Menú.Location = new System.Drawing.Point(0, 0);
             this.Menú.MdiWindowListItem = this.Ventana;
             this.Menú.Name = "Menú";
-            this.Menú.Size = new System.Drawing.Size(1386, 35);
+            this.Menú.Size = new System.Drawing.Size(1386, 33);
             this.Menú.TabIndex = 0;
             this.Menú.Text = "menuStrip1";
             // 
@@ -72,26 +72,33 @@ namespace Project
             this.Archivo.Size = new System.Drawing.Size(88, 29);
             this.Archivo.Text = "Archivo";
             // 
-            // ArchivoSalir
+            // abrirToolStripMenuItem
             // 
-            this.ArchivoSalir.Name = "ArchivoSalir";
-            this.ArchivoSalir.Size = new System.Drawing.Size(270, 34);
-            this.ArchivoSalir.Text = "Salir";
-            this.ArchivoSalir.Click += new System.EventHandler(this.ArchivoSalir_Click);
-            // 
-            // ArchivoCerrar
-            // 
-            this.ArchivoCerrar.Name = "ArchivoCerrar";
-            this.ArchivoCerrar.Size = new System.Drawing.Size(270, 34);
-            this.ArchivoCerrar.Text = "Cerrar";
-            this.ArchivoCerrar.Click += new System.EventHandler(this.ArchivoCerrar_Click);
+            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
+            this.abrirToolStripMenuItem.Text = "Abrir";
+            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.ArchivoAbrir_Click);
             // 
             // ArchivoNuevo
             // 
             this.ArchivoNuevo.Name = "ArchivoNuevo";
-            this.ArchivoNuevo.Size = new System.Drawing.Size(270, 34);
+            this.ArchivoNuevo.Size = new System.Drawing.Size(166, 34);
             this.ArchivoNuevo.Text = "Nuevo";
             this.ArchivoNuevo.Click += new System.EventHandler(this.ArchivoNuevo_Click);
+            // 
+            // ArchivoCerrar
+            // 
+            this.ArchivoCerrar.Name = "ArchivoCerrar";
+            this.ArchivoCerrar.Size = new System.Drawing.Size(166, 34);
+            this.ArchivoCerrar.Text = "Cerrar";
+            this.ArchivoCerrar.Click += new System.EventHandler(this.ArchivoCerrar_Click);
+            // 
+            // ArchivoSalir
+            // 
+            this.ArchivoSalir.Name = "ArchivoSalir";
+            this.ArchivoSalir.Size = new System.Drawing.Size(166, 34);
+            this.ArchivoSalir.Text = "Salir";
+            this.ArchivoSalir.Click += new System.EventHandler(this.ArchivoSalir_Click);
             // 
             // Ver
             // 
@@ -112,21 +119,21 @@ namespace Project
             // VentanaCascada
             // 
             this.VentanaCascada.Name = "VentanaCascada";
-            this.VentanaCascada.Size = new System.Drawing.Size(270, 34);
+            this.VentanaCascada.Size = new System.Drawing.Size(265, 34);
             this.VentanaCascada.Text = "Cascada";
             this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
             // 
             // VentanaMosaicoHorizontal
             // 
             this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
-            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(270, 34);
+            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(265, 34);
             this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
             this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
             // 
             // VentanaMosaicoVertical
             // 
             this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
-            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(270, 34);
+            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(265, 34);
             this.VentanaMosaicoVertical.Text = "Mosaico vertical";
             this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
             // 
@@ -137,15 +144,9 @@ namespace Project
             this.Ayuda.Text = "Ayuda";
             this.Ayuda.Click += new System.EventHandler(this.Ayuda_Click);
             // 
-            // abrirToolStripMenuItem
-            // 
-            this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
-            this.abrirToolStripMenuItem.Text = "Abrir";
-            this.abrirToolStripMenuItem.Click += new System.EventHandler(this.ArchivoAbrir_Click);
-            // 
             // VisorImágenes
             // 
+            this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 934);
@@ -156,6 +157,7 @@ namespace Project
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VisorImágenes";
             this.Text = "Visor de imágenes";
+            this.DragEnter += new System.Windows.Forms.DragEventHandler(this.VisorImágenes_DragEnter);
             this.Menú.ResumeLayout(false);
             this.Menú.PerformLayout();
             this.ResumeLayout(false);

@@ -32,6 +32,30 @@ namespace Project
             get { return (VentanaHija)this.ActiveMdiChild; }
         }
 
+        private void VisorImágenes_DragEnter(object sender, DragEventArgs e)
+        {
+            // Nos aseguramos de que lo que se está arrastrando son archivos
+            if (!e.Data.GetDataPresent(DataFormats.FileDrop))
+            {
+                e.Effect = DragDropEffects.None;
+                return;
+            }
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+            {
+                if (!file.ToUpper().EndsWith(".JPG") &&
+                !file.ToUpper().EndsWith(".BMP") &&
+                !file.ToUpper().EndsWith(".GIF"))
+                {
+                    e.Effect = DragDropEffects.None; // Alguno de los archivos
+                                                     // no es una imagen
+                    return;
+                }
+            }
+            e.Effect = DragDropEffects.Copy; // Correcto, son todo imágenes
+        }
+
+
         //Ayuda
         private void Ayuda_Click(object sender, EventArgs e)
         {
