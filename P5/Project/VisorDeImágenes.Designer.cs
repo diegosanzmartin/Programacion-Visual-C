@@ -157,6 +157,7 @@ namespace Project
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VisorImágenes";
             this.Text = "Visor de imágenes";
+            this.DragDrop += new System.Windows.Forms.DragEventHandler(this.VisorImágenes_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.VisorImágenes_DragEnter);
             this.Menú.ResumeLayout(false);
             this.Menú.PerformLayout();

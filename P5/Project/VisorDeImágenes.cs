@@ -118,12 +118,18 @@ namespace Project
             // que se permiten abrir y mediante Title especificamos
             // un título explicativo para la ventana.
             dlg.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
-            dlg.Title = dlg.FileName;
 
             // Si el resultado del diálogo es distinto de OK, terminar.
             if (dlg.ShowDialog() != DialogResult.OK) return;
+            string path = dlg.FileName;
 
-            byte[] contenidoArchivo = File.ReadAllBytes(dlg.FileName);
+            AbrirArchivo(path);
+        }
+
+        private void AbrirArchivo(string path)
+        {
+            string name = System.IO.Path.GetFileName(path);
+            byte[] contenidoArchivo = File.ReadAllBytes(path);
             // Creamos un flujo de tipo MemoryStream pasándole el contenido
             // del archivo.
             MemoryStream memoryArchivo = new MemoryStream(contenidoArchivo);
@@ -131,18 +137,25 @@ namespace Project
             // Usamos el método FromStream de la clase Image para crear una
             // "imagen" a partir del flujo anterior.
             Image newImage = Image.FromStream(memoryArchivo);
-            newImage.Tag = dlg.FileName;
+            newImage.Tag = path;
 
             // Creamos una nueva ventana hija con el método NuevaHija,
             // pasándole como título el nombre del archivo abierto.
             // (dlg.FileName)
-            NuevaHija(System.IO.Path.GetFileName(dlg.FileName));
+            NuevaHija(name);
 
             // Obtenemos una referencia a la nueva ventana mediante la
             // propiedad HijaActiva.
             // Asignamos "imagen" al picture box de la nueva ventana
             HijaActiva.PictureBox.Image = newImage;
             ActualizarMenús(true);
+        }
+
+        private void VisorImágenes_DragDrop(object sender, DragEventArgs e)
+        {
+            string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+            foreach (string file in files)
+                AbrirArchivo(file);
         }
     }
 }
