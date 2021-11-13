@@ -137,5 +137,10 @@ namespace Project
                 this.PictureBox.Image.Save(this.PictureBox.Image.Tag.ToString());
             }
         }
+
+        private void VentanaHija_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            ((VisorImágenes)this.MdiParent).ActualizarMenús(false);
+        }
     }
 }

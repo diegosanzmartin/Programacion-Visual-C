@@ -85,14 +85,14 @@ namespace Project
             this.toolStripMenuItem1.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.toolStripMenuItem1.MergeIndex = 3;
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(267, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(228, 6);
             // 
             // ArchivoGuardar
             // 
             this.ArchivoGuardar.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.ArchivoGuardar.MergeIndex = 4;
             this.ArchivoGuardar.Name = "ArchivoGuardar";
-            this.ArchivoGuardar.Size = new System.Drawing.Size(270, 34);
+            this.ArchivoGuardar.Size = new System.Drawing.Size(231, 34);
             this.ArchivoGuardar.Text = "Guardar";
             this.ArchivoGuardar.Click += new System.EventHandler(this.ArchivoGuardar_Click);
             // 
@@ -101,7 +101,7 @@ namespace Project
             this.ArchivoGuardarComo.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.ArchivoGuardarComo.MergeIndex = 5;
             this.ArchivoGuardarComo.Name = "ArchivoGuardarComo";
-            this.ArchivoGuardarComo.Size = new System.Drawing.Size(270, 34);
+            this.ArchivoGuardarComo.Size = new System.Drawing.Size(231, 34);
             this.ArchivoGuardarComo.Text = "Gurdar como...";
             this.ArchivoGuardarComo.Click += new System.EventHandler(this.ArchivoGuardarComo_Click);
             // 
@@ -121,28 +121,28 @@ namespace Project
             // ImagenAjustar
             // 
             this.ImagenAjustar.Name = "ImagenAjustar";
-            this.ImagenAjustar.Size = new System.Drawing.Size(270, 34);
+            this.ImagenAjustar.Size = new System.Drawing.Size(237, 34);
             this.ImagenAjustar.Text = "Ajustar Ventana";
             this.ImagenAjustar.Click += new System.EventHandler(this.ImagenAjustar_Click);
             // 
             // ImagenRotar
             // 
             this.ImagenRotar.Name = "ImagenRotar";
-            this.ImagenRotar.Size = new System.Drawing.Size(270, 34);
+            this.ImagenRotar.Size = new System.Drawing.Size(237, 34);
             this.ImagenRotar.Text = "Rotar 90º";
             this.ImagenRotar.Click += new System.EventHandler(this.ImagenRotar_Click);
             // 
             // ImagenAñadirTexto
             // 
             this.ImagenAñadirTexto.Name = "ImagenAñadirTexto";
-            this.ImagenAñadirTexto.Size = new System.Drawing.Size(270, 34);
+            this.ImagenAñadirTexto.Size = new System.Drawing.Size(237, 34);
             this.ImagenAñadirTexto.Text = "Añadir Texto";
             this.ImagenAñadirTexto.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
             // ImagenEscalaGrises
             // 
             this.ImagenEscalaGrises.Name = "ImagenEscalaGrises";
-            this.ImagenEscalaGrises.Size = new System.Drawing.Size(270, 34);
+            this.ImagenEscalaGrises.Size = new System.Drawing.Size(237, 34);
             this.ImagenEscalaGrises.Text = "Escala de grises";
             this.ImagenEscalaGrises.Click += new System.EventHandler(this.ImagenEscalaGrises_Click);
             // 
@@ -160,6 +160,7 @@ namespace Project
             this.ShowIcon = false;
             this.ShowInTaskbar = false;
             this.Text = "Form2";
+            this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.VentanaHija_FormClosed);
             this.Resize += new System.EventHandler(this.VentanaHija_Resize);
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).EndInit();
             this.menuStrip1.ResumeLayout(false);

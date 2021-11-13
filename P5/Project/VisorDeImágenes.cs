@@ -16,7 +16,7 @@ namespace Project
         public VisorImágenes()
         {
             InitializeComponent();
-            ArchivoCerrar.Enabled = false;
+            ActualizarMenús(false);
         }
         private void NuevaHija(string título)
         {
@@ -53,6 +53,15 @@ namespace Project
             this.LayoutMdi(MdiLayout.TileVertical);
         }
 
+        public void ActualizarMenús(bool opcion)
+        {
+            if (this.MdiChildren.Length != 1) return;
+            ArchivoCerrar.Enabled = opcion;
+            VentanaCascada.Enabled = opcion;
+            VentanaMosaicoHorizontal.Enabled = opcion;
+            VentanaMosaicoVertical.Enabled = opcion;
+        }
+
         //Archivo
         private void ArchivoSalir_Click(object sender, EventArgs e)
         {
@@ -63,6 +72,8 @@ namespace Project
         {
             if (this.HijaActiva != null)
                 this.HijaActiva.Close();
+            
+            ActualizarMenús(false);
         }
 
         private void ArchivoNuevo_Click(object sender, EventArgs e)
@@ -71,7 +82,7 @@ namespace Project
             string título = "Doc" + (númeroHijas + 1);
             NuevaHija(título);
             this.HijaActiva.PictureBox.Image = Properties.Resources.Imágen1;
-            ArchivoCerrar.Enabled = true;
+            ActualizarMenús(true);
         }
 
         private void ArchivoAbrir_Click(object sender, EventArgs e)
@@ -107,7 +118,7 @@ namespace Project
             // propiedad HijaActiva.
             // Asignamos "imagen" al picture box de la nueva ventana
             HijaActiva.PictureBox.Image = newImage;
+            ActualizarMenús(true);
         }
-
     }
 }
