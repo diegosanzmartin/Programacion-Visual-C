@@ -23,6 +23,14 @@ namespace Project
             get { return m_PictureBox; }
         }
 
+        //Ventana
+        private void VentanaHija_Resize(object sender, EventArgs e)
+        {
+            if (this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom)
+                this.PictureBox.Size = this.ClientSize;
+        }
+
+        //Imagen
         private void ImagenAjustar_Click(object sender, EventArgs e)
         {
             // Si no estamos en modo ajustar, activamos este modo
@@ -39,12 +47,6 @@ namespace Project
                 this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             }
             ImagenAjustar.Checked = this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom;
-        }
-
-        private void VentanaHija_Resize(object sender, EventArgs e)
-        {
-            if (this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom)
-                this.PictureBox.Size = this.ClientSize;
         }
 
         private void ImagenRotar_Click(object sender, EventArgs e)
@@ -67,7 +69,7 @@ namespace Project
             this.PictureBox.Refresh();
         }
 
-        private void escalaDeGrisesToolStripMenuItem_Click(object sender, EventArgs e)
+        private void ImagenEscalaGrises_Click(object sender, EventArgs e)
         {
             PictureBox pictureBox = this.PictureBox;
             Image imagen = pictureBox.Image;
@@ -89,16 +91,51 @@ namespace Project
 
                 // Dibujar la imagen:
                 // DrawImage(Imagen, RectImgDestino, XImgFuente, YImgFuente, anchoImgFuente, anchoImgFuente, UnidadesGráficas, AtributosImagen)
-                gfx.DrawImage(imagen, new Rectangle(0,0,imagen.Width, imagen.Height), 0, 0, imagen.Width, imagen.Height, GraphicsUnit.Pixel, atrImg);
+                gfx.DrawImage(imagen, new Rectangle(0, 0, imagen.Width, imagen.Height), 0, 0, imagen.Width, imagen.Height, GraphicsUnit.Pixel, atrImg);
 
             }
             // Refrescar pictureBox
             this.Refresh();
         }
 
-        private void menuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
-        {
+        //Archivo
 
+        private void ArchivoGuardarComo_Click(object sender, EventArgs e)
+        {
+            GuardarComo();
+        }
+
+        private void GuardarComo()
+        {
+            // Mostrar el diálogo SaveFileDialog y configurarlo de forma
+            // análoga al OpenFileDialog de la opción "Abrir".
+            SaveFileDialog dlgGuardar = new SaveFileDialog();
+            dlgGuardar.Filter = "Image Files(*.BMP;*.JPG;*.GIF)|*.BMP;*.JPG;*.GIF|All files (*.*)|*.*";
+
+            // Si el resultado del diálogo es distinto de OK, terminar.
+            if (dlgGuardar.ShowDialog() != DialogResult.OK) return;
+            else if (dlgGuardar.FileName.ToUpper().EndsWith(".JPG"))
+            {
+                // Usar el método Save para guardar la imagen en formato jpg.
+                this.PictureBox.Image.Save(dlgGuardar.FileName);
+            }
+            // Análogamente con el resto de formatos permitidos.
+            else if (dlgGuardar.FileName.ToUpper().EndsWith(".PNG"))
+                this.PictureBox.Image.Save(dlgGuardar.FileName);
+            else if (dlgGuardar.FileName.ToUpper().EndsWith(".BMP"))
+                this.PictureBox.Image.Save(dlgGuardar.FileName);
+            // Actualizar el título de esta ventana.
+            this.Name = "Saved";
+        }
+
+        private void ArchivoGuardar_Click(object sender, EventArgs e)
+        {
+            if (this.Text.StartsWith("Doc")) GuardarComo();
+            else
+            {
+                MessageBox.Show(this.PictureBox.Image.Tag.ToString());
+                this.PictureBox.Image.Save(this.PictureBox.Image.Tag.ToString());
+            }
         }
     }
 }

@@ -16,6 +16,7 @@ namespace Project
         public VisorImágenes()
         {
             InitializeComponent();
+            ArchivoCerrar.Enabled = false;
         }
         private void NuevaHija(string título)
         {
@@ -70,6 +71,7 @@ namespace Project
             string título = "Doc" + (númeroHijas + 1);
             NuevaHija(título);
             this.HijaActiva.PictureBox.Image = Properties.Resources.Imágen1;
+            ArchivoCerrar.Enabled = true;
         }
 
         private void ArchivoAbrir_Click(object sender, EventArgs e)
@@ -94,6 +96,7 @@ namespace Project
             // Usamos el método FromStream de la clase Image para crear una
             // "imagen" a partir del flujo anterior.
             Image newImage = Image.FromStream(memoryArchivo);
+            newImage.Tag = dlg.FileName;
 
             // Creamos una nueva ventana hija con el método NuevaHija,
             // pasándole como título el nombre del archivo abierto.
@@ -102,10 +105,8 @@ namespace Project
 
             // Obtenemos una referencia a la nueva ventana mediante la
             // propiedad HijaActiva.
-            HijaActiva.PictureBox.Image = newImage;
-
             // Asignamos "imagen" al picture box de la nueva ventana
-
+            HijaActiva.PictureBox.Image = newImage;
         }
 
     }

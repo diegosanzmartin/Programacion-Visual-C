@@ -32,11 +32,15 @@ namespace Project
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(VentanaHija));
             this.m_PictureBox = new System.Windows.Forms.PictureBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
+            this.Archivo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripSeparator();
+            this.ArchivoGuardar = new System.Windows.Forms.ToolStripMenuItem();
+            this.ArchivoGuardarComo = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenEscalaDeGrises = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAjustar = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenRotar = new System.Windows.Forms.ToolStripMenuItem();
             this.ImagenAñadirTexto = new System.Windows.Forms.ToolStripMenuItem();
-            this.escalaDeGrisesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ImagenEscalaGrises = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.m_PictureBox)).BeginInit();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -56,14 +60,50 @@ namespace Project
             this.menuStrip1.GripMargin = new System.Windows.Forms.Padding(2, 2, 0, 2);
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(24, 24);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.Archivo,
             this.ImagenEscalaDeGrises});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(880, 35);
+            this.menuStrip1.Size = new System.Drawing.Size(880, 33);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "menuStrip1";
             this.menuStrip1.Visible = false;
-            this.menuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.menuStrip1_ItemClicked);
+            // 
+            // Archivo
+            // 
+            this.Archivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.ArchivoGuardar,
+            this.ArchivoGuardarComo});
+            this.Archivo.MergeAction = System.Windows.Forms.MergeAction.MatchOnly;
+            this.Archivo.Name = "Archivo";
+            this.Archivo.Size = new System.Drawing.Size(88, 29);
+            this.Archivo.Text = "Archivo";
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.toolStripMenuItem1.MergeIndex = 3;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(267, 6);
+            // 
+            // ArchivoGuardar
+            // 
+            this.ArchivoGuardar.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.ArchivoGuardar.MergeIndex = 4;
+            this.ArchivoGuardar.Name = "ArchivoGuardar";
+            this.ArchivoGuardar.Size = new System.Drawing.Size(270, 34);
+            this.ArchivoGuardar.Text = "Guardar";
+            this.ArchivoGuardar.Click += new System.EventHandler(this.ArchivoGuardar_Click);
+            // 
+            // ArchivoGuardarComo
+            // 
+            this.ArchivoGuardarComo.MergeAction = System.Windows.Forms.MergeAction.Insert;
+            this.ArchivoGuardarComo.MergeIndex = 5;
+            this.ArchivoGuardarComo.Name = "ArchivoGuardarComo";
+            this.ArchivoGuardarComo.Size = new System.Drawing.Size(270, 34);
+            this.ArchivoGuardarComo.Text = "Gurdar como...";
+            this.ArchivoGuardarComo.Click += new System.EventHandler(this.ArchivoGuardarComo_Click);
             // 
             // ImagenEscalaDeGrises
             // 
@@ -71,7 +111,7 @@ namespace Project
             this.ImagenAjustar,
             this.ImagenRotar,
             this.ImagenAñadirTexto,
-            this.escalaDeGrisesToolStripMenuItem});
+            this.ImagenEscalaGrises});
             this.ImagenEscalaDeGrises.MergeAction = System.Windows.Forms.MergeAction.Insert;
             this.ImagenEscalaDeGrises.MergeIndex = 2;
             this.ImagenEscalaDeGrises.Name = "ImagenEscalaDeGrises";
@@ -81,30 +121,30 @@ namespace Project
             // ImagenAjustar
             // 
             this.ImagenAjustar.Name = "ImagenAjustar";
-            this.ImagenAjustar.Size = new System.Drawing.Size(237, 34);
+            this.ImagenAjustar.Size = new System.Drawing.Size(270, 34);
             this.ImagenAjustar.Text = "Ajustar Ventana";
             this.ImagenAjustar.Click += new System.EventHandler(this.ImagenAjustar_Click);
             // 
             // ImagenRotar
             // 
             this.ImagenRotar.Name = "ImagenRotar";
-            this.ImagenRotar.Size = new System.Drawing.Size(237, 34);
+            this.ImagenRotar.Size = new System.Drawing.Size(270, 34);
             this.ImagenRotar.Text = "Rotar 90º";
             this.ImagenRotar.Click += new System.EventHandler(this.ImagenRotar_Click);
             // 
             // ImagenAñadirTexto
             // 
             this.ImagenAñadirTexto.Name = "ImagenAñadirTexto";
-            this.ImagenAñadirTexto.Size = new System.Drawing.Size(237, 34);
+            this.ImagenAñadirTexto.Size = new System.Drawing.Size(270, 34);
             this.ImagenAñadirTexto.Text = "Añadir Texto";
             this.ImagenAñadirTexto.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
-            // escalaDeGrisesToolStripMenuItem
+            // ImagenEscalaGrises
             // 
-            this.escalaDeGrisesToolStripMenuItem.Name = "escalaDeGrisesToolStripMenuItem";
-            this.escalaDeGrisesToolStripMenuItem.Size = new System.Drawing.Size(237, 34);
-            this.escalaDeGrisesToolStripMenuItem.Text = "Escala de grises";
-            this.escalaDeGrisesToolStripMenuItem.Click += new System.EventHandler(this.escalaDeGrisesToolStripMenuItem_Click);
+            this.ImagenEscalaGrises.Name = "ImagenEscalaGrises";
+            this.ImagenEscalaGrises.Size = new System.Drawing.Size(270, 34);
+            this.ImagenEscalaGrises.Text = "Escala de grises";
+            this.ImagenEscalaGrises.Click += new System.EventHandler(this.ImagenEscalaGrises_Click);
             // 
             // VentanaHija
             // 
@@ -137,6 +177,10 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem ImagenAjustar;
         private System.Windows.Forms.ToolStripMenuItem ImagenRotar;
         private System.Windows.Forms.ToolStripMenuItem ImagenAñadirTexto;
-        private System.Windows.Forms.ToolStripMenuItem escalaDeGrisesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ImagenEscalaGrises;
+        private System.Windows.Forms.ToolStripMenuItem Archivo;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem ArchivoGuardar;
+        private System.Windows.Forms.ToolStripMenuItem ArchivoGuardarComo;
     }
 }

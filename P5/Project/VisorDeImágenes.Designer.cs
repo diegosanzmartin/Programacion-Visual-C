@@ -112,21 +112,21 @@ namespace Project
             // VentanaCascada
             // 
             this.VentanaCascada.Name = "VentanaCascada";
-            this.VentanaCascada.Size = new System.Drawing.Size(265, 34);
+            this.VentanaCascada.Size = new System.Drawing.Size(270, 34);
             this.VentanaCascada.Text = "Cascada";
             this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
             // 
             // VentanaMosaicoHorizontal
             // 
             this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
-            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(265, 34);
+            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(270, 34);
             this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
             this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
             // 
             // VentanaMosaicoVertical
             // 
             this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
-            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(265, 34);
+            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(270, 34);
             this.VentanaMosaicoVertical.Text = "Mosaico vertical";
             this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
             // 
