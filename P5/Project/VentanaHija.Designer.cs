@@ -223,7 +223,7 @@ namespace Project
             this.ImagenRotarIco.MergeIndex = 6;
             this.ImagenRotarIco.Name = "ImagenRotarIco";
             this.ImagenRotarIco.Size = new System.Drawing.Size(34, 34);
-            this.ImagenRotarIco.Text = "toolStripButton4";
+            this.ImagenRotarIco.Text = "Rotar 90º";
             this.ImagenRotarIco.Click += new System.EventHandler(this.ImagenRotar_Click);
             // 
             // ImagenAñadirTextoIco
@@ -235,7 +235,7 @@ namespace Project
             this.ImagenAñadirTextoIco.MergeIndex = 7;
             this.ImagenAñadirTextoIco.Name = "ImagenAñadirTextoIco";
             this.ImagenAñadirTextoIco.Size = new System.Drawing.Size(34, 34);
-            this.ImagenAñadirTextoIco.Text = "toolStripButton5";
+            this.ImagenAñadirTextoIco.Text = "Añadir texto";
             this.ImagenAñadirTextoIco.Click += new System.EventHandler(this.ImagenAñadirTexto_Click);
             // 
             // VentanaHija

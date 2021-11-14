@@ -43,12 +43,15 @@ namespace Project
             this.VentanaMosaicoVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
             this.MenúHerramientas = new System.Windows.Forms.ToolStrip();
-            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
-            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.ArchivoNuevoIco = new System.Windows.Forms.ToolStripButton();
+            this.ArchivoAbrirIco = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
-            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
+            this.AyudaIco = new System.Windows.Forms.ToolStripButton();
+            this.etiquietaEstado = new System.Windows.Forms.StatusStrip();
+            this.etiquetaEstado = new System.Windows.Forms.ToolStripStatusLabel();
             this.Menú.SuspendLayout();
             this.MenúHerramientas.SuspendLayout();
+            this.etiquietaEstado.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menú
@@ -125,21 +128,21 @@ namespace Project
             // VentanaCascada
             // 
             this.VentanaCascada.Name = "VentanaCascada";
-            this.VentanaCascada.Size = new System.Drawing.Size(270, 34);
+            this.VentanaCascada.Size = new System.Drawing.Size(265, 34);
             this.VentanaCascada.Text = "Cascada";
             this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
             // 
             // VentanaMosaicoHorizontal
             // 
             this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
-            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(270, 34);
+            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(265, 34);
             this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
             this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
             // 
             // VentanaMosaicoVertical
             // 
             this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
-            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(270, 34);
+            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(265, 34);
             this.VentanaMosaicoVertical.Text = "Mosaico vertical";
             this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
             // 
@@ -154,50 +157,70 @@ namespace Project
             // 
             this.MenúHerramientas.ImageScalingSize = new System.Drawing.Size(30, 30);
             this.MenúHerramientas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.toolStripButton1,
-            this.toolStripButton2,
+            this.ArchivoNuevoIco,
+            this.ArchivoAbrirIco,
             this.toolStripSeparator1,
-            this.toolStripButton8});
+            this.AyudaIco});
             this.MenúHerramientas.Location = new System.Drawing.Point(0, 33);
             this.MenúHerramientas.Name = "MenúHerramientas";
             this.MenúHerramientas.Size = new System.Drawing.Size(1386, 39);
             this.MenúHerramientas.TabIndex = 2;
             this.MenúHerramientas.Text = "toolStrip1";
             // 
-            // toolStripButton1
+            // ArchivoNuevoIco
             // 
-            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
-            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton1.Name = "toolStripButton1";
-            this.toolStripButton1.Size = new System.Drawing.Size(34, 34);
-            this.toolStripButton1.Text = "Nuevo";
-            this.toolStripButton1.Click += new System.EventHandler(this.ArchivoNuevo_Click);
+            this.ArchivoNuevoIco.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ArchivoNuevoIco.Image = ((System.Drawing.Image)(resources.GetObject("ArchivoNuevoIco.Image")));
+            this.ArchivoNuevoIco.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ArchivoNuevoIco.Name = "ArchivoNuevoIco";
+            this.ArchivoNuevoIco.Size = new System.Drawing.Size(34, 34);
+            this.ArchivoNuevoIco.Text = "Nuevo";
+            this.ArchivoNuevoIco.Click += new System.EventHandler(this.ArchivoNuevo_Click);
+            this.ArchivoNuevoIco.MouseEnter += new System.EventHandler(this.ArchivoNuevoIco_MouseEnter);
+            this.ArchivoNuevoIco.MouseLeave += new System.EventHandler(this.ArchivoNuevoIco_MouseLeave);
             // 
-            // toolStripButton2
+            // ArchivoAbrirIco
             // 
-            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
-            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton2.Name = "toolStripButton2";
-            this.toolStripButton2.Size = new System.Drawing.Size(34, 34);
-            this.toolStripButton2.Text = "Abrir";
-            this.toolStripButton2.Click += new System.EventHandler(this.ArchivoAbrir_Click);
+            this.ArchivoAbrirIco.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.ArchivoAbrirIco.Image = ((System.Drawing.Image)(resources.GetObject("ArchivoAbrirIco.Image")));
+            this.ArchivoAbrirIco.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.ArchivoAbrirIco.Name = "ArchivoAbrirIco";
+            this.ArchivoAbrirIco.Size = new System.Drawing.Size(34, 34);
+            this.ArchivoAbrirIco.Text = "Abrir";
+            this.ArchivoAbrirIco.Click += new System.EventHandler(this.ArchivoAbrir_Click);
             // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
             this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
             // 
-            // toolStripButton8
+            // AyudaIco
             // 
-            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
-            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
-            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
-            this.toolStripButton8.Name = "toolStripButton8";
-            this.toolStripButton8.Size = new System.Drawing.Size(34, 34);
-            this.toolStripButton8.Text = "Acerca de";
-            this.toolStripButton8.Click += new System.EventHandler(this.Ayuda_Click);
+            this.AyudaIco.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.AyudaIco.Image = ((System.Drawing.Image)(resources.GetObject("AyudaIco.Image")));
+            this.AyudaIco.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.AyudaIco.Name = "AyudaIco";
+            this.AyudaIco.Size = new System.Drawing.Size(34, 34);
+            this.AyudaIco.Text = "Acerca de";
+            this.AyudaIco.Click += new System.EventHandler(this.Ayuda_Click);
+            // 
+            // etiquietaEstado
+            // 
+            this.etiquietaEstado.ImageScalingSize = new System.Drawing.Size(24, 24);
+            this.etiquietaEstado.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.etiquetaEstado});
+            this.etiquietaEstado.Location = new System.Drawing.Point(0, 912);
+            this.etiquietaEstado.Name = "etiquietaEstado";
+            this.etiquietaEstado.Size = new System.Drawing.Size(1386, 22);
+            this.etiquietaEstado.TabIndex = 4;
+            this.etiquietaEstado.Text = "statusStrip1";
+            // 
+            // etiquetaEstado
+            // 
+            this.etiquetaEstado.Name = "etiquetaEstado";
+            this.etiquetaEstado.Size = new System.Drawing.Size(1371, 15);
+            this.etiquetaEstado.Spring = true;
+            this.etiquetaEstado.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
             // VisorImágenes
             // 
@@ -205,6 +228,7 @@ namespace Project
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 934);
+            this.Controls.Add(this.etiquietaEstado);
             this.Controls.Add(this.MenúHerramientas);
             this.Controls.Add(this.Menú);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
@@ -220,6 +244,8 @@ namespace Project
             this.Menú.PerformLayout();
             this.MenúHerramientas.ResumeLayout(false);
             this.MenúHerramientas.PerformLayout();
+            this.etiquietaEstado.ResumeLayout(false);
+            this.etiquietaEstado.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -240,10 +266,12 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem ArchivoNuevo;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
         private System.Windows.Forms.ToolStrip MenúHerramientas;
-        private System.Windows.Forms.ToolStripButton toolStripButton1;
-        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripButton ArchivoNuevoIco;
+        private System.Windows.Forms.ToolStripButton ArchivoAbrirIco;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
-        private System.Windows.Forms.ToolStripButton toolStripButton8;
+        private System.Windows.Forms.ToolStripButton AyudaIco;
+        private System.Windows.Forms.StatusStrip etiquietaEstado;
+        private System.Windows.Forms.ToolStripStatusLabel etiquetaEstado;
     }
 }
 

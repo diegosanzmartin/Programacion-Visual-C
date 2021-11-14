@@ -47,6 +47,7 @@ namespace Project
                 this.PictureBox.SizeMode = PictureBoxSizeMode.AutoSize;
             }
             ImagenAjustar.Checked = this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom;
+            ImagenAjustarIco.Checked = this.PictureBox.SizeMode == PictureBoxSizeMode.Zoom;
         }
 
         private void ImagenRotar_Click(object sender, EventArgs e)

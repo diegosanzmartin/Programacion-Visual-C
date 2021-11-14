@@ -167,5 +167,16 @@ namespace Project
             if (ventanaHijaActiva != null)
                 ToolStripManager.Merge(ventanaHijaActiva.MenúHerramientasHijo, this.MenúHerramientas);
         }
+
+        //Estado etiquetas
+        private void ArchivoNuevoIco_MouseEnter(object sender, EventArgs e)
+        {
+            this.etiquetaEstado.Text = "Crea una nueva ventana con una imagen predefinida";
+        }
+
+        private void ArchivoNuevoIco_MouseLeave(object sender, EventArgs e)
+        {
+            this.etiquetaEstado.Text = "";
+        }
     }
 }
