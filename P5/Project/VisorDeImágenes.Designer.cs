@@ -42,7 +42,13 @@ namespace Project
             this.VentanaMosaicoHorizontal = new System.Windows.Forms.ToolStripMenuItem();
             this.VentanaMosaicoVertical = new System.Windows.Forms.ToolStripMenuItem();
             this.Ayuda = new System.Windows.Forms.ToolStripMenuItem();
+            this.MenúHerramientas = new System.Windows.Forms.ToolStrip();
+            this.toolStripButton1 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripButton2 = new System.Windows.Forms.ToolStripButton();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
+            this.toolStripButton8 = new System.Windows.Forms.ToolStripButton();
             this.Menú.SuspendLayout();
+            this.MenúHerramientas.SuspendLayout();
             this.SuspendLayout();
             // 
             // Menú
@@ -75,28 +81,28 @@ namespace Project
             // abrirToolStripMenuItem
             // 
             this.abrirToolStripMenuItem.Name = "abrirToolStripMenuItem";
-            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(166, 34);
+            this.abrirToolStripMenuItem.Size = new System.Drawing.Size(270, 34);
             this.abrirToolStripMenuItem.Text = "Abrir";
             this.abrirToolStripMenuItem.Click += new System.EventHandler(this.ArchivoAbrir_Click);
             // 
             // ArchivoNuevo
             // 
             this.ArchivoNuevo.Name = "ArchivoNuevo";
-            this.ArchivoNuevo.Size = new System.Drawing.Size(166, 34);
+            this.ArchivoNuevo.Size = new System.Drawing.Size(270, 34);
             this.ArchivoNuevo.Text = "Nuevo";
             this.ArchivoNuevo.Click += new System.EventHandler(this.ArchivoNuevo_Click);
             // 
             // ArchivoCerrar
             // 
             this.ArchivoCerrar.Name = "ArchivoCerrar";
-            this.ArchivoCerrar.Size = new System.Drawing.Size(166, 34);
+            this.ArchivoCerrar.Size = new System.Drawing.Size(270, 34);
             this.ArchivoCerrar.Text = "Cerrar";
             this.ArchivoCerrar.Click += new System.EventHandler(this.ArchivoCerrar_Click);
             // 
             // ArchivoSalir
             // 
             this.ArchivoSalir.Name = "ArchivoSalir";
-            this.ArchivoSalir.Size = new System.Drawing.Size(166, 34);
+            this.ArchivoSalir.Size = new System.Drawing.Size(270, 34);
             this.ArchivoSalir.Text = "Salir";
             this.ArchivoSalir.Click += new System.EventHandler(this.ArchivoSalir_Click);
             // 
@@ -119,21 +125,21 @@ namespace Project
             // VentanaCascada
             // 
             this.VentanaCascada.Name = "VentanaCascada";
-            this.VentanaCascada.Size = new System.Drawing.Size(265, 34);
+            this.VentanaCascada.Size = new System.Drawing.Size(270, 34);
             this.VentanaCascada.Text = "Cascada";
             this.VentanaCascada.Click += new System.EventHandler(this.VentanaCascada_Click);
             // 
             // VentanaMosaicoHorizontal
             // 
             this.VentanaMosaicoHorizontal.Name = "VentanaMosaicoHorizontal";
-            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(265, 34);
+            this.VentanaMosaicoHorizontal.Size = new System.Drawing.Size(270, 34);
             this.VentanaMosaicoHorizontal.Text = "Mosaico horizontal";
             this.VentanaMosaicoHorizontal.Click += new System.EventHandler(this.VentanaMosaicoHorizontal_Click);
             // 
             // VentanaMosaicoVertical
             // 
             this.VentanaMosaicoVertical.Name = "VentanaMosaicoVertical";
-            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(265, 34);
+            this.VentanaMosaicoVertical.Size = new System.Drawing.Size(270, 34);
             this.VentanaMosaicoVertical.Text = "Mosaico vertical";
             this.VentanaMosaicoVertical.Click += new System.EventHandler(this.VentanaMosaicoVertical_Click);
             // 
@@ -144,12 +150,62 @@ namespace Project
             this.Ayuda.Text = "Ayuda";
             this.Ayuda.Click += new System.EventHandler(this.Ayuda_Click);
             // 
+            // MenúHerramientas
+            // 
+            this.MenúHerramientas.ImageScalingSize = new System.Drawing.Size(30, 30);
+            this.MenúHerramientas.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripButton1,
+            this.toolStripButton2,
+            this.toolStripSeparator1,
+            this.toolStripButton8});
+            this.MenúHerramientas.Location = new System.Drawing.Point(0, 33);
+            this.MenúHerramientas.Name = "MenúHerramientas";
+            this.MenúHerramientas.Size = new System.Drawing.Size(1386, 39);
+            this.MenúHerramientas.TabIndex = 2;
+            this.MenúHerramientas.Text = "toolStrip1";
+            // 
+            // toolStripButton1
+            // 
+            this.toolStripButton1.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton1.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton1.Image")));
+            this.toolStripButton1.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton1.Name = "toolStripButton1";
+            this.toolStripButton1.Size = new System.Drawing.Size(34, 34);
+            this.toolStripButton1.Text = "Nuevo";
+            this.toolStripButton1.Click += new System.EventHandler(this.ArchivoNuevo_Click);
+            // 
+            // toolStripButton2
+            // 
+            this.toolStripButton2.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton2.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton2.Image")));
+            this.toolStripButton2.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton2.Name = "toolStripButton2";
+            this.toolStripButton2.Size = new System.Drawing.Size(34, 34);
+            this.toolStripButton2.Text = "Abrir";
+            this.toolStripButton2.Click += new System.EventHandler(this.ArchivoAbrir_Click);
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(6, 39);
+            // 
+            // toolStripButton8
+            // 
+            this.toolStripButton8.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Image;
+            this.toolStripButton8.Image = ((System.Drawing.Image)(resources.GetObject("toolStripButton8.Image")));
+            this.toolStripButton8.ImageTransparentColor = System.Drawing.Color.Magenta;
+            this.toolStripButton8.Name = "toolStripButton8";
+            this.toolStripButton8.Size = new System.Drawing.Size(34, 34);
+            this.toolStripButton8.Text = "Acerca de";
+            this.toolStripButton8.Click += new System.EventHandler(this.Ayuda_Click);
+            // 
             // VisorImágenes
             // 
             this.AllowDrop = true;
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1386, 934);
+            this.Controls.Add(this.MenúHerramientas);
             this.Controls.Add(this.Menú);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
@@ -157,10 +213,13 @@ namespace Project
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.Name = "VisorImágenes";
             this.Text = "Visor de imágenes";
+            this.MdiChildActivate += new System.EventHandler(this.VisorImágenes_MdiChildActivate);
             this.DragDrop += new System.Windows.Forms.DragEventHandler(this.VisorImágenes_DragDrop);
             this.DragEnter += new System.Windows.Forms.DragEventHandler(this.VisorImágenes_DragEnter);
             this.Menú.ResumeLayout(false);
             this.Menú.PerformLayout();
+            this.MenúHerramientas.ResumeLayout(false);
+            this.MenúHerramientas.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -180,6 +239,11 @@ namespace Project
         private System.Windows.Forms.ToolStripMenuItem VentanaMosaicoVertical;
         private System.Windows.Forms.ToolStripMenuItem ArchivoNuevo;
         private System.Windows.Forms.ToolStripMenuItem abrirToolStripMenuItem;
+        private System.Windows.Forms.ToolStrip MenúHerramientas;
+        private System.Windows.Forms.ToolStripButton toolStripButton1;
+        private System.Windows.Forms.ToolStripButton toolStripButton2;
+        private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripButton toolStripButton8;
     }
 }
 

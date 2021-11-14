@@ -157,5 +157,15 @@ namespace Project
             foreach (string file in files)
                 AbrirArchivo(file);
         }
+
+        private void VisorImágenes_MdiChildActivate(object sender, EventArgs e)
+        {
+            //Eliminar cualquier fusión previa
+            ToolStripManager.RevertMerge(this.MenúHerramientas);
+            VentanaHija ventanaHijaActiva = (VentanaHija)this.ActiveMdiChild;
+
+            if (ventanaHijaActiva != null)
+                ToolStripManager.Merge(ventanaHijaActiva.MenúHerramientasHijo, this.MenúHerramientas);
+        }
     }
 }

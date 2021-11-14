@@ -67,6 +67,7 @@ namespace Project
             }
             // Refrescar el picture box
             this.PictureBox.Refresh();
+            this.Refresh();
         }
 
         private void ImagenEscalaGrises_Click(object sender, EventArgs e)
