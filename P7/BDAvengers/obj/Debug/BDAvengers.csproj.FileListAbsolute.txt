@@ -1,0 +1,8 @@
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\bin\Debug\bd_avengers.mdf
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\bin\Debug\bd_avengers_log.ldf
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\bin\Debug\BDAvengers.dll
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\bin\Debug\BDAvengers.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\obj\Debug\BDAvengers.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\obj\Debug\BDAvengers.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\obj\Debug\BDAvengers.dll
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\BDAvengers\obj\Debug\BDAvengers.pdb

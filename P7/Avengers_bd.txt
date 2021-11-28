@@ -1,0 +1,81 @@
+Para utilizar con SQL Server Express (sqlcmd):
+-----------------------------------------------
+
+USE master
+
+if exists (select * from sysdatabases where name='bd_avengers')
+begin
+  raiserror('La base de datos existe; eliminándola....',0,1)
+  DROP database bd_avengers
+end
+GO
+
+CHECKPOINT
+go
+
+raiserror('Creando base de datos bd_avengers....',0,1)
+go
+
+
+CREATE DATABASE bd_avengers
+GO
+
+USE bd_avengers
+GO
+
+if db_name() <> 'bd_avengers'
+   raiserror('Error, ''USE bd_avengers'' falló!  Killing the SPID now.'
+            ,22,127) with log
+GO
+
+/*** execute sp_dboption 'bd_avengers' ,'trunc. log on chkpt.' ,'true' ***/
+/*** En SQL Server 2012 cambiar la línea anterior por la siguiente ***/
+ALTER DATABASE bd_avengers SET RECOVERY SIMPLE
+GO
+
+execute sp_addtype id      ,'varchar(11)' ,'NOT NULL'
+execute sp_addtype tid     ,'varchar(6)'  ,'NOT NULL'
+execute sp_addtype empid   ,'char(9)'     ,'NOT NULL'
+
+raiserror('Creando la tabla famoso....',0,1)
+
+GO
+
+CREATE TABLE avenger
+(
+  ID int PRIMARY KEY NOT NULL,
+  alias varchar(20) NOT NULL,
+  nombre varchar(30) NOT NULL,
+  cumple datetime NOT NULL,
+  imagen varchar(20) NOT NULL
+)
+GO
+
+INSERT famoso VALUES (1, 'Iron Man', 'Tony Stark', '29/05/1970', 'IronMan.jpg')
+INSERT famoso VALUES (2, 'Spider-Man', 'Peter Parker', '10/08/2001', 'Spider-Man.jpg')
+INSERT famoso VALUES (3, 'Capitán América', 'Steven Rogers', '04/07/1918', 'CapAmerica.jpg')
+INSERT famoso VALUES (4, 'Hulk', 'Bruce Banner', '18/12/1969', 'Hulk.jpg')
+INSERT famoso VALUES (5, 'Thor', 'Thor Odinson', '11/08/964', 'Thor.jpg')
+INSERT famoso VALUES (6, 'Black Widow', 'Natalia Romanoff', '22/11/1984', 'BlackWidow.jpg')
+INSERT famoso VALUES (7, 'Doctor Strange', 'Stephen Strange', '19/07/1930', 'DoctorStrange.jpg')
+INSERT famoso VALUES (8, 'Groot', 'Groot', '13/11/1960', 'Groot.jpg')
+GO
+
+UPDATE STATISTICS famoso
+GO
+
+CHECKPOINT
+GO
+
+USE master
+GO
+
+CHECKPOINT
+GO
+
+declare @dttm varchar(55)
+select  @dttm=convert(varchar,getdate(),113)
+raiserror('Editando %s ....',1,1,@dttm) with nowait
+GO
+
+quit

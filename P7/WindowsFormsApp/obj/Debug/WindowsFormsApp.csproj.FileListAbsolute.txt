@@ -1,0 +1,15 @@
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe.config
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\WindowsFormsApp.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\WindowsFormsApp.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.Properties.Resources.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.GenerateResource.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\bd_avengers.mdf
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\bd_avengers_log.ldf
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\BDAvengers.dll
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\bin\Debug\BDAvengers.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.ElementoLista.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P7\WindowsFormsApp\obj\Debug\WindowsFormsApp.Avengers.resources
