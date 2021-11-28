@@ -1,0 +1,11 @@
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\bin\Debug\project.exe.config
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\bin\Debug\project.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\bin\Debug\project.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.csproj.AssemblyReference.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.exe
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.pdb
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.Hilos.resources
+C:\Users\diego\Universidad\Programación Visual\Lab\P6\project\obj\Debug\project.Ayuda.resources
